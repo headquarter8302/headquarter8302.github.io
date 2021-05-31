@@ -1,0 +1,14 @@
+# Ignore unecessary files
+
+# Filter everything...
+*
+
+# ... except the .gitignore...
+!.gitignore
+
+# ... and all important files.
+!*.txt
+!*.svg
+!*.html
+!*.css
+!*.js
