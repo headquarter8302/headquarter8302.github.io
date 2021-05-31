@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 
 /* ...then actual styles */
 body {
-  background-color: white;
+  background-color: #DCDCDC;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -55,12 +55,18 @@ h2 {
 div#intro {
   padding: 10px;
   margin: 15px;
+  border-left: 10px solid #00d6d6;
   min-width: 500px;
+  font-size: x-large;
+  font-weight: bold;
 }
 
 div.columns {
   min-width: 90%;
-  display: flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
   background-color: grey;
   border-radius: 10px;
 }
