@@ -46,7 +46,7 @@ a {
 }
 
 a:hover {
-    transform: transform: scale(1.3);
+    text-decoration: underline;
 }
 
 h2 {
