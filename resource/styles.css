@@ -34,7 +34,7 @@ body::-webkit-scrollbar {
 
 /* ...then actual styles */
 body {
-  background-color: grey;
+  background-color: white;
   font-family: "Open Sans", sans-serif;
 }
 
@@ -61,7 +61,8 @@ div#intro {
 div.columns {
   min-width: 90%;
   display: flexbox;
-  background-color: DarkGray;
+  background-color: grey;
+  border-radius: 10px;
 }
 
 .col {
