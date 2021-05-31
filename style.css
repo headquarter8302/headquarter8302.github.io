@@ -1,0 +1,79 @@
+/*
+* CSS INFO
+* BREAKPOINT: 500px.
+* RESPONSIVE: TRUE.
+* AUTHOR: headquarter8302, W3Schools <https://www.w3schools.com>.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap');
+
+/* Meta styles... */
+html {
+    -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    background: #002a32;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #fff;
+    cursor: pointer;
+}
+
+::selection {
+  color: inherit;
+  background-color: white;
+}
+
+/* ...then actual styles */
+body {
+  background-color: grey;
+  font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  border-bottom: 2px solid white;
+  font-family:"Montserrat", sans-serif;
+}
+
+div#intro {
+  padding: 10px;
+  margin: 15px;
+  min-width: 500px;
+
+div.columns {
+  min-width: 90%;
+  display: flexbox;
+  background-color: DarkGray;
+}
+
+.col {
+  min-width: 150px;
+  max-width: 500px;
+  background-color: grey;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 30px;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 1px 1px 5px black;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: darkgrey;
+  text-align: center;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
