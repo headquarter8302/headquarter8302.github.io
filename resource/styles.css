@@ -36,6 +36,8 @@ body::-webkit-scrollbar {
 body {
   background-color: #DCDCDC;
   font-family: "Open Sans", sans-serif;
+  margin-left: 150px;
+  padding: 0px 10px;
 }
 
 a {
@@ -85,15 +87,32 @@ div.columns {
   background-color: #A9A9A9;
 }
 
-.header {
-  padding: 10px 16px;
-  background: #555;
-  color: darkgrey;
-  text-align: center;
+.sidenav {
+  height: 100%;
+  width: 150px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #1D2951;
+  overflow-x: hidden;
+  padding-top: 20px;
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%
+.sidenav > a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav > a:hover {
+  color: #f1f1f1;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
