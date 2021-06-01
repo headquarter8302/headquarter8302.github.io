@@ -1,13 +1,13 @@
 function openNav() {
-  document.getElementById("sidenav").style.width = "250px";
-  document.getElementById("main").style.marginLeft = "250px";
-  document.getElementById("togglebtn").innerHTML = "X";
-  document.getElementById("openbtn").onclick = "closeNav()";
+  document.getElementById("openbtn").style.display = "none";
+  document.getElementById("closebtn").style.display = "initial";
+  document.getElementById("sidenav").style.width = "160px";
+  document.getElementById("main").style.marginLeft = "160px";
 }
 
 function closeNav() {
-  document.getElementById("sidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
-  document.getElementById("togglebtn").innerHTML = "☰";
-  document.getElementById("togglebtn").onclick = "openNav()";
+  document.getElementById("closebtn").style.display = "none";
+  document.getElementById("openbtn").style.display = "initial";
+  document.getElementById("sidenav").style.width = "0px";
+  document.getElementById("main").style.marginLeft = "0px";
 }
