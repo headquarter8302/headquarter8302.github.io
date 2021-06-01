@@ -144,3 +144,10 @@ div.columns {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
 }
+
+button {
+    border-radius: none;
+    color: white;
+    background-color: black;
+    padding: 5px;
+}
