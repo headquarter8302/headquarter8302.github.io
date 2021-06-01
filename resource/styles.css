@@ -28,8 +28,9 @@ body::-webkit-scrollbar {
 }
 
 ::selection {
-  color: inherit;
-  background-color: white;
+    color: inherit;
+    filter: invert(100%);
+    background-color: #4B0082;
 }
 
 /* ...then actual styles */
