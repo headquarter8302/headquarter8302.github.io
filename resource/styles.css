@@ -39,6 +39,11 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 
+div#main {
+    margin-left: 160px;
+    padding: 0px 10px;
+}
+
 a {
     text-decoration: none;
     transition: all 1s;
@@ -120,4 +125,9 @@ div.columns {
 
 #sidenav > a:hover {
   color: #f1f1f1;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
