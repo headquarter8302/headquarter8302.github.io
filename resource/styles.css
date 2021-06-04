@@ -11,6 +11,7 @@
 html {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
+    transition: all 0.5s;
 }
 
 body::-webkit-scrollbar {
@@ -62,11 +63,13 @@ a:hover {
 h2 {
     font-family:"Montserrat", sans-serif;
     border-bottom: 4px solid white;
+    color: white;
 }
 
 h3 {
-  border-bottom: 2px solid white;
-  font-family:"Montserrat", sans-serif;
+    border-bottom: 2px solid white;
+    font-family:"Montserrat", sans-serif;
+    color: white;
 }
 
 pre {
