@@ -49,8 +49,14 @@ a {
     transition: all 1s;
 }
 
+a:visited {
+    color: #909;
+}
+
 a:hover {
     text-decoration: underline;
+    border-bottom: 1px dashed blue;
+    font-weight: bold;
 }
 
 h2 {
@@ -61,6 +67,13 @@ h2 {
 h3 {
   border-bottom: 2px solid white;
   font-family:"Montserrat", sans-serif;
+}
+
+pre {
+    background-color: black;
+    color: #F5F5F5;
+    padding: 10px;
+    margin: 10px;
 }
 
 .main {
@@ -137,6 +150,7 @@ div.columns {
     position: fixed;
     top: 10px;
     left: 10px;
+    border: 1px solid white;
 }
 
 .togglebtn:hover {
