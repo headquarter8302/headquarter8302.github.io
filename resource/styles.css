@@ -127,16 +127,19 @@ div.columns {
   color: #f1f1f1;
 }
 
-#togglebtn {
-  font-size: 20px;
-  cursor: pointer;
-  background-color: #111;
-  color: white;
-  padding: 10px 15px;
-  border: none;
+.togglebtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    position: fixed;
+    top: 10px;
+    left: 10px;
 }
 
-#togglebtn:hover {
+.togglebtn:hover {
   background-color: #444;
 }
 
@@ -150,4 +153,5 @@ button {
     color: white;
     background-color: black;
     padding: 5px;
+    border-style: none;
 }
