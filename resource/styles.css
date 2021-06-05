@@ -139,7 +139,7 @@ div.columns {
 
 #center-circle {
     animation: center-cirlce infinite;
-    animaton-duration: 1s;
+    animation-duration: 1s;
     position: relative;
 }
 
