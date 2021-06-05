@@ -59,3 +59,19 @@
 #main > :nth-child(34) { animation-delay: calc(34 * var(--fade-in-delay)); }
 #main > :nth-child(35) { animation-delay: calc(35 * var(--fade-in-delay)); }
 #main > :nth-child(n+35) { animation-delay: calc(36 * var(--fade-in-delay)); }
+
+@keyframes right-circle {
+  from {right:50%;}
+  to {right:0%;}
+}
+
+@keyframes left-circle {
+  from {left:50%;}
+  to {left:0%;}
+}
+
+@keyframes center-circle {
+  0% {background-color:blue;}
+  50% {background-color:yellow;}
+  100% {background-color:#00d6d6;}
+}
