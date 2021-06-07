@@ -60,6 +60,25 @@ a:hover {
     font-weight: bold;
 }
 
+div#title-wrapper {
+    justify-content: center;
+    margin: 25px;
+    display: block;
+    font-family: "Montserrat", sans-serif;
+}
+
+#title-wrapper > #title {
+    color: white;
+    font-size: xxx-large;
+    font-weight: bolder;
+}
+
+#title-wrapper > #subtitle {
+    color: white;
+    font-size: x-large;
+    font-style: italic;
+}
+
 h2 {
     font-family:"Montserrat", sans-serif;
     border-bottom: 4px solid white;
@@ -100,6 +119,7 @@ div.columns {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: stretch;
   padding: 10px;
   background-color: grey;
   border-radius: 10px;
