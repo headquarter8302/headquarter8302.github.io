@@ -60,6 +60,14 @@ a:hover {
     font-weight: bold;
 }
 
+.small {
+    font-size: small;
+}
+
+.big {
+    font-size: large;
+}
+
 div#title-wrapper {
     justify-content: center;
     margin: 25px;
