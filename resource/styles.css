@@ -74,7 +74,8 @@ a {
 
 #intro-box {
   box-shadow: 1px 5px 5px var(--grey-colour);
-  margin: 3%;
+  margin-left: 10%;
+  margin-right: 10%;
   padding: 15px;
   display: flex;
   background-color: black;
