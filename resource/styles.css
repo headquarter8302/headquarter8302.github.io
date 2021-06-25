@@ -50,6 +50,11 @@ a {
   color: inherit;
 }
 
+a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
+    content: "";
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/25/External.svg);
+}
+
 #nav-container {
   display: flex;
   justify-content: center;
@@ -70,7 +75,15 @@ a {
   margin-left: 10px;
   margin-right: 10px;
   border: 1px solid white;
+  filter: invert(1);
 }
+
+.nav-button#home-link::after {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/Home_free_icon.svg');
+}
+
+.nav-button#ramble-link::after {
+    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/49/OOjs_UI_icon_folderPlaceholder-ltr.svg');
 
 #intro-box {
   box-shadow: 1px 5px 5px var(--grey-colour);
