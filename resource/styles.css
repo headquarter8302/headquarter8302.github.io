@@ -13,6 +13,16 @@ html {
     scroll-behavior: smooth;
 }
 
+/* Image by <https://www.freepik.com/starline> on Freepik */
+body {
+    background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg');
+    background-repeat: space;
+    background-size: 100% 100%;
+    box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
+    margin: 0;
+    padding: auto;
+}
+
 body::-webkit-scrollbar {
     background: #00d6d6;
 }
