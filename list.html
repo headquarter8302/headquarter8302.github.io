@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>Test list app hosted in GitHub by Headquarter8302</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  --neutral-bg: #101010;
+}
+
+#log {
+  display: none;
+  visibility: hidden;
+}
+
+body {
+  background-color: black;
+  color: white;
+}
+
+#p-list h1 {
+  border-bottom: 3px dashed grey;
+  padding-bottom: 10px;
+}
+
+#p-list {
+  margin: 10%;
+  margin-left: 1%;
+  padding: 1%;
+  background-color: var(--neutral-bg);
+  border-radius: 10px;
+  border: 3px solid grey;
+  min-width: 100%;
+  min-height: 50%;
+}
+
+ol {
+  display: block;
+  list-style-type: circle;
+}
+
+form {
+  background-color: var(--neutral-bg);
+  padding: 1%;
+  margin: 1%;
+  border-left: 10px solid white;
+  border-radius: 0 10px 10px 0;
+}
+
+fieldset {
+  border: none;
+}
+
+legend {
+  font-size: larger;
+  font-weight: bold;
+  border-bottom: 1px solid grey;
+}
+
+input, textarea {
+  background-color: #181818;
+  border: none;
+  color: white;
+  padding: 1%;
+  transition: width 50ms height 50ms;
+  outline: none;
+}
+
+textarea {
+  min-width: 50%;
+  max-width: 110%;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  transition: outline 500ms;
+  cursor: pointer;
+}
+
+input[type="submit"]:focus, input[type="submit"]:active {
+  outline: white 1px solid;
+}
+
+#p-list h2, #p-list input {
+  font-size: small;
+}
+  </style>
+</head>
+<body>
+<div id="p-list">
+  <h1>Phony List</h1>
+  <h2>By: <input type="text" name="username">&nbsp;<input type="submit" value="Submit Name"></h2>
+  <ol></ol>
+</div>
+
+<form>
+  <fieldset>
+    <legend>Enter your items in this phony list submitter!</legend>
+    <label for="submitlist">Type here:</label><br>
+    <textarea placeholder="Type your text here!" name="submitlist"></textarea>
+    <input type="submit" value="Submit new item" onclick="setName()">
+  </fieldset>
+</form>
+
+<div id="log" style="display:none;visibility:hidden">
+  _____        _____        _____
+ /     \      /     \      /     \
+&lt;       >----&lt;       >----&lt;       >
+ \_____/      \_____/      \_____/
+ /     \      /     \      /     \
+&lt;       >----&lt;       >----&lt;       >----.
+ \_____/      \_____/      \_____/      \
+       \      /     \      /     \      /
+        >----&lt;       >----&lt;       >----&lt;
+       /      \_____/      \_____/      \_____
+       \      /     \      /     \      /     \
+        `----&lt;       >----&lt;       >----&lt;       >
+              \_____/      \_____/      \_____/
+                           /     \      /
+                          &lt;       >----'
+                           \_____/
+  <br>
+  Welcome to the matrix, 
+</div>
+</body>
+<script type="text/javascript">
+const log = document.getElementById("log").innerText;
+
+function setName() {
+  var user = document.getElementById("name").innerText;
+  console.log(log + name);
+}
+</script>
+</html>
