@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap" rel="stylesheet">
         <style>
             :root {
                 --gradient: linear-gradient(to right, orange, blue);
@@ -15,7 +18,8 @@
                     #eeff41,
                     #f9a825,
                     #ff5722
-                    )
+                    );
+                    font-family: 'Heebo',sans-serif;
             }
 
             body {
@@ -32,7 +36,7 @@
             h1 {
                 color: white; /* Fallback value */
                 font-weight: 900;
-                font-size: 250%;
+                font-size: 500%;
                 background: var(--gradient);
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
@@ -64,7 +68,9 @@
             }
 
             hr {
+                border: none;
                 height: 10px;
+                margin: 0;
                 background: var(--rainbow);
                 border-radius: 1000px;
             }
