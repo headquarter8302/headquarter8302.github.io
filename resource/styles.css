@@ -83,7 +83,7 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
 }
 
 #intro-box {
-  animation: intro 250ms;
+  animation: intro 1s;
   box-shadow: 1px 5px 5px;
   margin-left: 10%;
   margin-right: 10%;
