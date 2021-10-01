@@ -116,6 +116,7 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
   padding-bottom: 30px;
   margin-left: 50px;
   margin-right: 50px;
+  margin-block: 3%;
   border-radius: 10px;
   background-color: var(--gray-colour);
 }
@@ -125,7 +126,7 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
 }
 
 .title {
-  color: black;
+  color: white;
   padding-left: 30px;
   margin-left: 5px;
   border-left: 25px solid var(--grey-colour);
@@ -163,4 +164,8 @@ pre {
     color: #F5F5F5;
     padding: 10px;
     margin: 10px;
+}
+
+.box > pre {
+  font-size: xx-large;
 }
