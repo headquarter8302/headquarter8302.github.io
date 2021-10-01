@@ -16,12 +16,18 @@
   </head>
   <body>
     <noscript>Hello, you seems to not have JavaScript enabled, which is okay, since there is no JS in the website now</noscript>
+
+    <!-- Begin home nav -->
     <nav>
       <div id="nav-container">
         <a id="home-link" title="Home" class="nav-button" href="home.html">Home</a>
         <a id="ramble-link" title="Ramblings and Thoughts" href="rambling.html" class="nav-button">R&T</a>
+        <a href="https://github.com/headquarter8302/headquarter8302.github.io" id="gh-link" title="GitHub Link" class="nav-button">GH Link</a>
       </div>
     </nav>
+    <!-- End home nav -->
+
+    <!-- Begin big black box -->
     <div id="intro-box">
       <div id="title">
         Markus<br><code>headquarter8302</code>
@@ -30,15 +36,51 @@
         Front-end programmer, JS sucker, <a href="https://mediawiki.org/wiki/Help:Wikitext">Wikitext whiz</a>, FANDOM regular, resident internet jerk.
       </div>
     </div>
+    <!-- End box -->
+
     <br><br><br>
-    <div class="box geometric-background">
-      <h2 class="title">Hi</h2>
+
+    <!-- Begin boxes -->
+    <div class="box">
+      <h2 class="title">Good in?</h2>
       <div class="content">
-        <p>Website temporarily clowned until I could put something with value here.</p>
-        <br /><br />
-        <p>Image is by <a href="https://www.freepik.com">Freepik</a>, by the way.</p>
+        <pre lang="css">
+          front.end#developer,
+          *[novice] {
+            color: var(--grey-colour);
+          }
+        </pre>
       </div>
     </div>
+    <div class="box">
+      <h2 class="title">JS?</h2>
+      <div class="content">
+        <pre lang="js">
+          if (nearlySane == false) {
+            --killTime;
+            console.error("Not much time left!")
+          }
+        </pre>
+      </div>
+    </div>
+    <div class="box">
+      <h2 class="title">What about python?</h2>
+      <div class="content">
+        <pre lang="python">
+          from random import randint
+
+          really = randint(0, 1)
+          command = print("Am I really?\n")
+
+          if really == 0:
+            print("No")
+          else:
+            print("Pizza")
+        </pre>
+      </div>
+    </div>
+    <!-- End boxes -->
+
   </body>
   <script src="resource/script.js" async></script>
 </html>

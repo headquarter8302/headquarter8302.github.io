@@ -15,22 +15,15 @@ html {
 
 /* Image by <https://www.freepik.com/starline> on Freepik */
 body {
-    background-image: url('https://image.freepik.com/free-vector/stylish-hexagonal-line-pattern-background_1017-19742.jpg');
-    background-repeat: space;
-    background-size: 30%;
-    backdrop-filter: invert(1);
+    background-color: azure;
     box-shadow: 0 0 200px rgba(0,0,0,0.9) inset;
     margin: 0;
-    padding: auto;
-}
-
-body::-webkit-scrollbar {
-    background: #00d6d6;
+    padding: 0;
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
-    height: 12px;
+    width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -88,14 +81,6 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
   border: 1px solid white;
 }
 
-.nav-button#home-link::after {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/3/30/Home_free_icon.svg');
-}
-
-.nav-button#ramble-link::after {
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/4/49/OOjs_UI_icon_folderPlaceholder-ltr.svg');
-}
-
 #intro-box {
   box-shadow: 1px 5px 5px var(--grey-colour);
   margin-left: 10%;
@@ -112,6 +97,7 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
   margin-right: 5px;
   background: var(--webkit-accent-colour);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -131,7 +117,7 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
   margin-left: 50px;
   margin-right: 50px;
   border-radius: 10px;
-  background-color: white;
+  background-color: var(--gray-colour);
 }
 
 .box.geometric-background {
