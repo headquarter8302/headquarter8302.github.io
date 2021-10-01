@@ -158,6 +158,6 @@ pre {
     margin: 10px;
 }
 
-.box > pre {
+.box pre {
   font-size: xx-large;
 }
