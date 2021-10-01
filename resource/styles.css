@@ -161,3 +161,9 @@ pre {
 .box pre {
   font-size: xx-large;
 }
+
+hr {
+  height: 10px;
+  background: var(--accent-colour);
+  border: none;
+}
