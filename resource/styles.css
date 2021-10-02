@@ -9,7 +9,7 @@
 
 /* Meta styles... */
 :root {
-  overflow-x: none;
+  overflow-x: hidden;
   background-image: linear-gradient(to right, black, #303030);
   color: #fff;
   transition: all 1s;
