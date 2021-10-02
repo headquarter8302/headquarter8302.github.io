@@ -36,8 +36,9 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--gray-colour);
-    cursor: pointer;
+  background: var(--gray-colour);
+  cursor: pointer;
+  box-shadow: black 0 0 5px inset;
 }
 
 ::selection {
