@@ -7,3 +7,11 @@ console.log(
         "%cHello! :)",
         "color:red;font-family:monospace;font-size:3rem;font-weight:bold"
       );
+
+      function changetheme(){
+        if (remember.checked == 1){
+          document.getElementsByTagName("html").style.filter = "invert(1)" ;
+        } else {
+          document.getElementsByTagName("html").style.filter = "none"
+        }
+      }
