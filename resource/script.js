@@ -2,6 +2,7 @@
 document.__defineGetter__("cookie", function() { return '';} );
 document.__defineSetter__("cookie", function() {} );
 
+const remember = document.getElementById("themechanger");
 
 console.log(
         "%cHello! :)",
