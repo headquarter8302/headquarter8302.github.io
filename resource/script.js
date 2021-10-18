@@ -3,6 +3,7 @@ document.__defineGetter__("cookie", function() { return '';} );
 document.__defineSetter__("cookie", function() {} );
 
 const remember = document.getElementById("themechanger");
+const root = document.getElementsByTagName("html");
 
 console.log(
         "%cHello! :)",
@@ -11,8 +12,8 @@ console.log(
 
       function changetheme(){
         if (remember.checked == 1){
-          document.getElementsByTagName("html").style.filter = "invert(1)" ;
+          root.style.filter = "invert(1)";
         } else {
-          document.getElementsByTagName("html").style.filter = "none"
+          root.style.filter = "none";
         }
       }
