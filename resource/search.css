@@ -7,7 +7,6 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   font-family: "Segoe UI", "Open Sans", sans-serif;
-  overflow: hidden;
 }
 
 #searchbox {
@@ -32,8 +31,8 @@ label#searchinput > input:focus {
   box-shadow: none;
 }
 
-.red {
-  color: red;
+.blue {
+  color: cyan;
 }
 
 button {
