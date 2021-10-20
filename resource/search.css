@@ -1,0 +1,58 @@
+body {
+  background: radial-gradient(#282828, #181818);
+  color: white;
+  text-align: center;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+}
+
+#searchbox {
+  margin-block: auto;
+}
+
+h1#title {
+  pointer-events: none;
+  color: grey;
+}
+
+label#searchinput > input {
+  border: 2px solid grey;
+  border-radius: 12px;
+  box-shadow: 0 0 10px black inset;
+  outline: none;
+  padding-inline: 1%;
+  padding-block: 5px;
+}
+
+label#searchinput > input:focus {
+  box-shadow: none;
+}
+
+.red {
+  color: red;
+}
+
+button {
+  cursor: pointer;
+  border: 2px solid grey;
+  margin: 1%;
+  border-radius: 8px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  background: black;
+  width: 100%;
+  padding-block: 0.5%;
+}
+
+footer > a {
+  font-size: 50%;
+  appearance: none;
+  text-decoration: none;
+  color: grey;
+}
