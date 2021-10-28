@@ -41,6 +41,7 @@
     </table>
 
     <aside>
+        WARNING: IF YOU DON'T HAVE LOCALSTORAGE OR LOCALSTORAGE ENABLED, THIS GAME WOULDN'T SAVE YOUR PROGRESS
         <h1><s>Clicker</s> <i>My</i> clicker game for dummies</h1>
         <p>Indeed it is.</p>
         
@@ -81,6 +82,7 @@
 
     function tick() {
         clickCounter.innerText = count
+        localStorage.setItem("clicks", count);
     }
 </script>
 
