@@ -1,58 +1,71 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 body {
-  background: radial-gradient(#282828, #181818);
-  color: white;
-  text-align: center;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: "Segoe UI", "Open Sans", sans-serif;
+    background: radial-gradient(#282828, #181818);
+    color: white;
+    text-align: center;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Segoe UI", "Open Sans", sans-serif;
+}
+
+#searcharea {
+    margin-block: 10%;
 }
 
 #searchbox {
-  margin-block: auto;
+    margin-block: auto;
 }
-
+  
 h1#title {
-  pointer-events: none;
-  color: grey;
+    pointer-events: none;
+    color: grey;
+    font-size: 400%;
 }
-
+  
 label#searchinput > input {
-  border: 2px solid grey;
-  border-radius: 12px;
-  box-shadow: 0 0 10px black inset;
-  outline: none;
-  padding-inline: 1%;
-  padding-block: 5px;
+    border: 2px solid grey;
+    border-radius: 12px;
+    outline: none;
+    padding-inline: 1%;
+    padding-block: 5px;
 }
-
-label#searchinput > input:focus {
-  box-shadow: none;
-}
-
+ 
 .blue {
-  color: cyan;
+    color: cyan;
 }
-
+  
 button {
-  cursor: pointer;
-  border: 2px solid grey;
-  margin: 1%;
-  border-radius: 8px;
+    cursor: pointer;
+    border: 2px solid grey;
+    margin-top: 1%;
+    border-radius: 8px;
+    padding: 0.5%;
+    margin-inline: 1%;
 }
-
+  
 footer {
-  position: absolute;
-  bottom: 0;
-  background: black;
-  width: 100%;
-  padding-block: 0.5%;
+    position: absolute;
+    bottom: 0;
+    background: black;
+    width: 100%;
+    padding-block: 0.5%;
 }
-
+  
 footer > a {
-  font-size: 50%;
-  appearance: none;
-  text-decoration: none;
-  color: grey;
+    font-size: 50%;
+    appearance: none;
+    text-decoration: none;
+    color: grey;
 }
