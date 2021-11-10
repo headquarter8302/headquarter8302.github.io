@@ -2,49 +2,52 @@
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <base href="https://headquarter8302.github.io/">
-  <link rel="stylesheet" href="resource/search.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-  <meta name="description" content="A humble search linker.">
-  <meta property="og:description" content="A humble search linker.">
-  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Blue_magnifying_glass_icon.svg" type="image/x-icon">
-  <meta property="og:title" content="QuickSearch" />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://headquarter8302.github.io/search" />
-  <meta property="og:image" content="resource/quicksearch_logo.png" />
-  <meta name="twitter:card" content="summary_large_image">
-   <meta name="theme-color" content="#00FFFF">
-  <title>QuickSearch</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="search.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <meta name="description" content="A humble search linker.">
+    <meta property="og:description" content="A humble search linker.">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/c/c2/Blue_magnifying_glass_icon.svg"
+        type="image/x-icon">
+    <meta property="og:title" content="QuickSearch" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://headquarter8302.github.io/search" />
+    <meta property="og:image" content="resource/quicksearch_logo.png" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#00FFFF">
+    <link rel="stylesheet" href="/front/resources/search.css">
+    <title>QuickSearch</title>
 </head>
 
 <body>
-  <h1 id="title"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Blue_magnifying_glass_icon.svg"
-      alt="logo" width="50px"><span class="blue">Quick</span>Search</h1>
-  <div id="searcharea">
+    <div id="searcharea"></div>
+    <h1 id="title"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Blue_magnifying_glass_icon.svg"
+            alt="logo" width="70px"><span class="blue">Quick</span>Search</h1>
     <label id="searchinput">Search for:
-      <input id="searchbox" type="text" placeholder="anything!" />
-      <br>
+        <input id="searchbox" type="search" placeholder="anything!" />
+        <br>
     </label>
     <label id="searchon">Search on:
-      <button class="search" id="google">Google</button>
-      <button class="search" id="bing">Bing</button>
-      <button class="search" id="wikipedia">English Wikipedia</button>
+        <button class="search" id="google" title="Search this query on the Google search engine">Google</button>
+        <button class="search" id="bing" title="Search this query on the Bing search engine">Bing</button>
+        <button class="search" id="wikipedia" title="Search this query on the English Wikipedia's search">English
+            Wikipedia</button>
+        <button class="search" id="lucky">I'm feeling lucky</button>
     </label>
-  </div>
-  <hr>
-  <div id="weather">
-    Current weather in New York:
-    
-  </div>
-  <footer>
-    <a title="" target="_blank" href="https://en.wikipedia.org/wiki/Fictional_company" id="copyright">COPYRIGHT TERRA
-      CORPORATION © 2020-♾</a>
-  </footer>
-  <script src="resource/search.js"></script>
+    </div>
+    <hr>
+    <div id="weather">
+        Current weather in New York:
+
+    </div>
+    <footer>
+        <a title="" target="_blank" href="https://en.wikipedia.org/wiki/Fictional_company" id="copyright">COPYRIGHT
+            TERRA CORPORATION © 2020-♾</a>
+    </footer>
+    <script src="/front/resources/search.js"></script>
 
 </html>
