@@ -1,30 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
-  <title>Redirecting you in 10 seconds...</title>
+  <title>404 Not Found</title>
   <link rel="stylesheet" href="resource/styles.css">
   <style>
     * {
       justify-content: center;
       text-align: center;
     }
-    
+
+    @keyframes animtitle {
+      from {transfrom: translateX(-200%);}
+      to {transform: translateX(200%);}
+    }
+
     h1 {
-      font-size: 8vw;
+      font-size: 10vw;
+      animation: animtitle 1s infinite;
+      animation-timing-function: linear;
+    }
+
+    blockquote {
+      margin: 0 auto;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <h1>404</h1>
-  <p>It seems that you have landed in an empty page, don't worry, either something would be added later, or you made a typo, or you just landed on well, an empty page!</p>
+  <blockquote onload="showQuote()" id="quote">
+  </blockquote>
+  <p>It seems that you have landed in an empty page. Don't worry, either something would be added later, or you made a
+    typo, or you just landed on an, well, an empty page!</p>
   <br>
   <p></p>
 </body>
 <script async="async" type="application/javascript">
-  setTimeout(function () {
-    window.location.href = "https://headquarter8302.github.io";
-    window.clearTimeout(tID);		// clear time out.
-  }, 10000);
+  const quoteElem = document.getElementById('quote');
+
   console.warn("This is a 404 page, you should not be here!");
+
+  function showQuote()
+  {
+    var quotes = [
+    	'\"GET out of my swamp!\"',
+    	'\"DAMNIT WE KNOW, EVERYBODY KNOWS, 404 PAGE, YOU IN IT, WE GET IT.\"',
+    	'<code>nil void</code>',
+    	'\"You broke it, you broke everything!\"',
+    	'<code>ReferenceError on line 136 column 7: \'page\' is not defined</code>',
+    	'Ew, Bootstrap? That\'s so out of date.',
+      'React to this! <i>*throws uncatchable error*</i>.',
+      'Bloody hell this is an incomprehensible mess of dumped cookie you got me doing!',
+      'Do not worry, our professional page recoverer would arrive at your location in 9999999999999999999999 years.',
+      'Existant? My a-',
+      '<i>How come you be so gullible, to the trickery and deception of broken links?</i>',
+      'Ey screw off mate, we got work to do here.',
+      'Oh! Didn\'t see you there, would you mind closing the door? I\'m still changing 😉.',
+      'Hippity hoppity your bandwidth is now my property.',
+      '<s>Could you stick your JS into my CSS?</s> ~ Zach a.k.a Zacatero.',
+      'Ten thousand degrees kelvin of pure nothingness.',
+      'Warning: Your Live Server configuration is misconfigured, please reconfigure the misconfigured configuration file to configure the configuration file.',
+      'Tang in space.',
+      'Nothing to see here.',
+      'PICKLED RIIIIIIIICK!',
+      'This chat is under no obligation to be alive at all times. ~ Pcj.',
+      'Twinkle, please respond to me 🥺. ~ Calum Dingwall a.k.a Caburum.'
+    ];
+
+    var Pick = Math.floor(Math.random() * (Joke.length));
+    quoteElem.innerText(quotes[Pick]);
+  }
 </script>
+
 </html>
