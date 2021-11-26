@@ -42,14 +42,14 @@
   <br>
   <p></p>
 </body>
-<script async="async" type="application/javascript">
-  const quoteElem = document.getElementById('quote');
+<script defer="defer" type="application/javascript">
+const quoteElem = document.getElementById('quote');
 
-  console.warn("This is a 404 page, you should not be here!");
+console.warn("This is a 404 page, you should not be here!");
 
-  function showQuote() {
+function showQuote() {
     var quotes = [
-      '\"GET out of my swamp!\"',
+      '\\"GET out of my swamp!\"',
       '\"DAMNIT WE KNOW, EVERYBODY KNOWS, 404 PAGE, YOU IN IT, WE GET IT.\"',
       '<code>nil void</code>',
       '\"You broke it, you broke everything!\"',
@@ -73,9 +73,13 @@
       'Twinkle, please respond to me 🥺. ~ Calum Dingwall a.k.a Caburum.'
     ];
 
-    var Pick = Math.floor(Math.random() * (Joke.length));
+    var Pick = Math.floor(Math.random() * (quotes.length));
     quoteElem.innerText(quotes[Pick]);
   }
+
+window.onload = (event) => {
+  showQuote();
+};
 </script>
 
 </html>
