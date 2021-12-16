@@ -19,6 +19,14 @@
   --gray-colour: #303030;
 }
 
+@media (prefers-color-scheme: light) {
+  :root {filter: invert(1);}
+}
+
+@media (prefers-reduced-motion) {
+  * {transition: none; animation: none;}
+}
+
 html {
     -webkit-font-smoothing: antialiased;
     scroll-behavior: smooth;
