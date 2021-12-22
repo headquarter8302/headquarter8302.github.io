@@ -187,3 +187,16 @@ hr {
   background: var(--accent-colour);
   border: none;
 }
+
+#skip-link {
+  transform: translateY(-200%);
+  padding: 2vw;
+  background-color: black;
+  color: white;
+  border-radius: 0 0 4px 0;
+  transition: transform 500ms;
+}
+
+#skip-link:focus {
+  transform: translateY(0);
+}
