@@ -189,6 +189,7 @@ hr {
 }
 
 #skip-link {
+  position: absolute;
   transform: translateY(-200%);
   padding: 2vw;
   background-color: black;
