@@ -1,22 +1,17 @@
-/*
-* CSS INFO
-* BREAKPOINT: 500px.
-* RESPONSIVE: TRUE.
-* AUTHOR: headquarter8302, W3Schools <https://www.w3schools.com>.
-*/
-
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap');
-
 /* Meta styles... */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 :root {
-  overflow-x: hidden;
-  background-image: linear-gradient(to right, black, #303030);
   color: #fff;
-  transition: all 1s;
   font-family: "Open Sans", sans-serif;
-  --accent-colour: linear-gradient(left, orange, blue, purple);
-  --webkit-accent-colour: -webkit-linear-gradient(left, orange, blue, purple);
-  --gray-colour: #303030;
+  --accent: linear-gradient(left, orange, blue, purple);
+  --webkit-accent: -webkit-linear-gradient(left, orange, blue, purple);
+  --gray: #303030;
+
+  height: 100%;
+  font-size: 1rem;
 }
 
 @media (prefers-color-scheme: light) {
@@ -27,36 +22,16 @@
   * {transition: none; animation: none;}
 }
 
-html {
-    -webkit-font-smoothing: antialiased;
-    scroll-behavior: smooth;
-}
-
 body {
-    margin: 0;
-    padding: 0;
-}
+  margin: 0;
+  width: 100%; height: 100%;
 
-::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
-  box-shadow: black 0 0 5px inset;
-}
-
-::-webkit-scrollbar-thumb {
-  background: var(--gray-colour);
-  cursor: pointer;
-  box-shadow: black 0 0 5px inset;
+  background: linear-gradient(to right, black, #303030);
+  background-size: cover;
 }
 
 ::selection {
   background-color: rgba(128,0,128,0.2) !important;
-}
-
-/* ...then actual styles */
-@keyframes intro {
-  from {opacity: 0;transform: translate(0,-5%);}
-  to {opacity: 1;transform: translate(0,0);}
 }
 
 a {
@@ -66,16 +41,38 @@ a {
   color: inherit;
 }
 
-a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
-    content: "";
-    background-image: url('https://upload.wikimedia.org/wikipedia/commons/2/25/External.svg');
+header {
+  box-shadow: 0 0 3px grey;
 }
 
-#nav-container {
+.changetheme {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  background-color: black;
+  padding: .25em;
+  border-radius: 0 4px 0 0;
+  border-right: 1px solid white;
+  border-top: 1px solid white;
+  transition: padding 150ms;
+}
+
+.changetheme:hover {
+  padding: 1em;
+}
+
+nav {
   display: flex;
   justify-content: center;
-  padding: 5px;
   width: 100%;
+  font-size: 1em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  gap: .5rem;
+  list-style-type: none;
 }
 
 .nav-button {
@@ -84,120 +81,91 @@ a[href*="//"]:not([href*="headquarter8302.github.io"])::after {
   border-left: 1px solid white;
   border-right: 1px solid white;
   transition: all 0.1s;
-  font-size: 1em;
 }
 
 .nav-button:hover {
-  transform: scale(1.1);
-  margin-left: 10px;
-  margin-right: 10px;
-  border: 1px solid white;
+  border: none;
+  outline: 1px solid white;
+  outline-offset: 2px;
 }
 
-#intro-box {
-  animation: intro 1s;
-  box-shadow: 1px 5px 5px;
-  margin-left: 10%;
-  margin-right: 10%;
-  padding: 15px;
-  display: flex;
+main {
+  padding: 2vw 10vw;
+}
+
+#main {
   background-color: black;
+  padding: 3vw;
+  display: flex;
+  flex-shrink: 2;
+  flex-wrap: wrap;
+  gap: 1vw;
+  margin-bottom: 2vw;
+  min-width: 0;
 }
 
-#title {
-  font-family: Arial, sans-serif;
-  font-weight: 900;
-  font-size: 7vw;
-  margin-right: 5px;
-  background: var(--webkit-accent-colour);
+@media screen and (max-width: 480px) {
+  #main {
+    font-size: 1rem;
+  }
+}
+
+#name {
+  font-size: 8vw;
+  font-weight: bold;
+  background: var(--webkit-accent);
   -webkit-background-clip: text;
-  background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
+  border-bottom: 3px solid white;
+  font-family: 'Montserrat', sans-serif;
 }
 
-#info {
-  width: auto;
-  border-left: 1px solid;
-  padding-left: 5px;
-  font-size: 1.2vw;
+#name sub {
+  font-family: monospace;
 }
 
-#info a {
-  color: white;
+#boxes {
+  display: grid;
+  gap: 1vw;
+  grid-template-columns: auto auto auto;
+}
+
+@media screen and (max-width: 480px) {
+  #boxes {
+    display: flex;
+  }
 }
 
 .box {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  margin-left: 50px;
-  margin-right: 50px;
-  margin-block: 3%;
-  border-radius: 10px;
-  background-color: var(--gray-colour);
+  padding: 1rem;
+  background-color: var(--gray);
+  border-radius: 4px;
+  transition: outline 250ms;
+  transition-timing-function: ease-in-out;
 }
 
-.title {
-  color: white;
-  padding-left: 30px;
-  margin-left: 5px;
-  border-left: 25px solid;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 4vw;
+@media screen and (max-width: 480px) {
+  .box {
+    height: 50%;
+  }
 }
 
-.content {
-  color: black;
-  margin: 10px;
-  font-size: 2vw;
+.box:hover {
+  outline: 3px solid white;
+  transition: outline 150ms;
 }
 
-.small {
-    font-size: small;
+.box:not(:hover) {
+  outline-offset: 0px solid white;
 }
 
-.big {
-    font-size: large;
-}
-h2 {
-    font-family:"Montserrat", sans-serif;
-    border-bottom: 4px solid white;
-    color: white;
+.box h2 {
+  border-left: 5px solid;
+  padding-left: 3%;
+  transition: border-left 150ms;
 }
 
-h3 {
-    border-bottom: 2px solid white;
-    font-family:"Montserrat", sans-serif;
-    color: white;
-}
-
-pre {
-    background-color: black;
-    color: #F5F5F5;
-    padding: 10px;
-    margin: 10px;
-}
-
-.box pre {
-  font-size: xx-large;
-}
-
-hr {
-  height: 10px;
-  background: var(--accent-colour);
-  border: none;
-}
-
-#skip-link {
-  position: absolute;
-  transform: translateY(-200%);
-  padding: 2vw;
-  background-color: black;
-  color: white;
-  border-radius: 0 0 4px 0;
-  transition: transform 500ms;
-}
-
-#skip-link:focus {
-  transform: translateY(0);
+.box:hover h2 {
+  border-left: 10px solid;
 }
