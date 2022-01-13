@@ -1,53 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" prefix="og: https://ogp.me/ns#">
+<html lang="en-GB" dir="ltr" id="html">
 
 <head>
-  <meta name="google-site-verification" content="Z2fqXXNCI7JwkPqZWGgY0ehFr_bWoS5cs5frw_wAIh4" />
-  <meta property="og:title" content="headquarter8302" />
-  <meta property="og:type" content="website.profile" />
-  <meta property="og:url" content="https://headquarter8302.github.io/" />
-  <meta property="og:image" content="resource/github-favicon.ico" />
-  <meta property="og:description" content="Test website hosted in GitHub by Headquarter8302" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>headquarter8302</title>
-  <meta name="description" content="Test website hosted in GitHub by Headquarter8302">
-  <meta name="author" content="Headquarter8302, Markus">
-  <link rel="canonical" href="https://headquarter8302.github.io/">
-  <link rel="preload" href="resource/styles.css" as="style">
-  <link rel="preload" href="resource/script.js" as="script">
-  <link rel="preload" href="https://upload.wikimedia.org/wikipedia/commons/2/25/External.svg" as="image">
-  <link rel="stylesheet" href="resource/styles.css">
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link rel="preconnect" href="https://upload.wikimedia.org">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap"
+  <title>Markus @ headquarter8302.github.io</title>
+  <link rel="stylesheet" href="/res/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
     rel="stylesheet">
-  <link rel="icon" href="resource/github-favicon.ico">
-  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0">
-  <meta name="google-site-verification" content="Z2fqXXNCI7JwkPqZWGgY0ehFr_bWoS5cs5frw_wAIh4" />
+  <script src="/res/script.js" defer></script>
 </head>
 
 <body>
-  <a id="skip-link" href="#main-content">Skip to content</a>
-
-  <!-- Begin home nav -->
+  <label class="changetheme">
+    Change theme
+    <input type="checkbox" id="changetheme" onchange="changeTheme()">
+  </label>
   <header>
-    <nav role="navigation">
-      <div id="nav-container">
-        <a id="home-link" title="Home" class="nav-button" href="home.html">Home</a>
-        <a id="ramble-link" title="Ramblings and Thoughts" href="rambling.html" class="nav-button">R&T</a>
-        <a href="https://github.com/headquarter8302/headquarter8302.github.io" id="gh-link" title="GitHub Link"
-          class="nav-button">GH Link</a>
-      </div>
-      <label>
-        Change theme
-        <input type="checkbox" name="theme" id="themechanger" onclick="changetheme()">
-      </label>
+    <nav>
+      <ul>
+        <li><a class="nav-button" href="/home">Home</a></li>
+        <li><a class="nav-button" href="/rambling">R&T</a></li>
+        <li><a class="nav-button" href="https://github.com/headquarter8302">GH Link</a></li>
+      </ul>
     </nav>
   </header>
-  <!-- End home nav -->
-  <h1>Under construction until I finish some other stuff</h1>
-
+  <main>
+    <div id="main">
+      <div id="name">
+        Markus<br><code>headquarter8302</code>
+      </div>
+      <div id="description">I am a front-end developer, JS sucker, <a href="">Wikitext</a> whiz, FANDOM regular,
+        resident internet jerk.</div>
+    </div>
+    <div id="boxes">
+      <div class="box">
+        <h2>Good in?</h2>
+        <p>CSS, bit of JS, Python, and I think 2 more languages.</p>
+      </div>
+      <div class="box">
+        <h2>What kind of job are you on right now?</h2>
+        <p>Contract jobs, the customer orders some sort of service from us, we complete or finish it in the timespan, or
+          earlier.</p>
+      </div>
+      <div class="box">
+        <h2>Where are you from?</h2>
+        <p>Maple land.</p>
+      </div>
+    </div>
+    <p>I'll add a proper dark theme when I have time</p>
+  </main>
 </body>
-<script src="resource/script.js" async></script>
 
 </html>
