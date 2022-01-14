@@ -1,35 +1,58 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta name="google-site-verification" content="Z2fqXXNCI7JwkPqZWGgY0ehFr_bWoS5cs5frw_wAIh4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Test website hosted in GitHub by Headquarter8302</title>
-    <meta name="description" content="Test website hosted in GitHub by Headquarter8302">
-    <meta name="robots" content="noindex">
-    <meta content="author" content="Headquarter8302">
-    <meta content="author" content="Markus">
-    <link rel="canonical" href="https://headquarter8302.github.io/">
-    <link rel="stylesheet" href="resource/styles.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="icon" href="resource/github-favicon.ico">
-    <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0">
-  </head>
-  <body>
+<html lang="en-GB" dir="ltr" id="html">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Markus @ headquarter8302.github.io</title>
+  <link rel="stylesheet" href="/resource/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans&display=swap"
+    rel="stylesheet">
+  <script src="/resource/script.js" defer></script>
+</head>
+
+<body>
+  <label class="changetheme">
+    Change theme
+    <input type="checkbox" id="changetheme" onchange="changeTheme()">
+  </label>
+  <header>
     <nav>
-      <div id="nav-container">
-        <a id="home-link" title="Home" class="nav-button" href="home.html">Home</a>
-        <a id="ramble-link" title="Ramblings and Thoughts" href="rambling.html" class="nav-button">R&T</a>
-        <a id="gh-page" title="GitHub Page" href="https://github.com/headquarter8302/headquarter8302.github.io" class="nav-button">GH Page</a>
-      </div>
+      <ul>
+        <li><a class="nav-button" href="/home">Home</a></li>
+        <li><a class="nav-button" href="/rambling">R&T</a></li>
+        <li><a class="nav-button" href="https://github.com/headquarter8302">GH Link</a></li>
+      </ul>
     </nav>
-    <div style="text-align:center;font-size:xx-large;font-weight:bold;">REDIRECTING...</div>
-    <noscript>
-      <p>You don't support JS, which is sad :(</p><br>
-      <p>Use the links above to navigate the website</p>
-    </noscript>
-  </body>
-  <script>
-    window.location.href = "https://headquarter8302.github.io/home.html";
-  </script>
+  </header>
+  <main>
+    <div id="main">
+      <div id="name">
+        Markus<br><code>headquarter8302</code>
+      </div>
+      <div id="description">I am a front-end developer, JS sucker, <a href="">Wikitext</a> whiz, FANDOM regular,
+        resident internet jerk.</div>
+    </div>
+    <div id="boxes">
+      <div class="box">
+        <h2>Good in?</h2>
+        <p>CSS, bit of JS, Python, and I think 2 more languages.</p>
+      </div>
+      <div class="box">
+        <h2>What kind of job are you on right now?</h2>
+        <p>Contract jobs, the customer orders some sort of service from us, we complete or finish it in the timespan, or
+          earlier.</p>
+      </div>
+      <div class="box">
+        <h2>Where are you from?</h2>
+        <p>Maple land.</p>
+      </div>
+    </div>
+    <p>I'll add a proper dark theme when I have time</p>
+  </main>
+</body>
+
 </html>
