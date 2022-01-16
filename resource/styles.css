@@ -134,6 +134,7 @@ main {
 @media screen and (max-width: 480px) {
   #boxes {
     display: flex;
+    flex-direction: column;
   }
 }
 
