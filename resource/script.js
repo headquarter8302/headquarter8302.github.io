@@ -7,9 +7,10 @@ function changeTheme() {
   if (isChanged) {
     document.getElementById('html').style.filter = "initial";
     isChanged = false;
-  }
+  } else {
     document.getElementById('html').style.filter = "invert\(1\) hue-rotate\(180deg\)";
     isChanged = true;
+  }
 }
 
 console.log(
