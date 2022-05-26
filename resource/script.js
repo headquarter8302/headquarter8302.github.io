@@ -2,8 +2,8 @@
 document.__defineGetter__("cookie", function() { return '';} );
 document.__defineSetter__("cookie", function() {} );
 
+let isChanged = false;
 function changeTheme() {
-  let isChanged = false;
   if (isChanged) {
     document.getElementById('html').style.filter = "initial";
     isChanged = false;
