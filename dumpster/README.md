@@ -1,1 +1,1 @@
-A place where stale ideas go rot.
+# A place where stale ideas go rot
