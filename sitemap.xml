@@ -1,22 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<url>
-  <loc>https://headquarter8302.github.io/</loc>
-</url>
-<url>
-    <loc>https://headquarter8302.github.io/attribution</loc>
-  </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
-    <loc>https://headquarter8302.github.io/.old/octocat</loc>
+    <loc>https://headquarter8302.github.io/</loc>
   </url>
   <url>
     <loc>https://headquarter8302.github.io/.old/cache</loc>
   </url>
   <url>
-    <loc>https://headquarter8302.github.io/.old</loc>
+    <loc>https://headquarter8302.github.io/.old/index</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/.old/links</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/.old/octocat</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/.old/scp-htf2</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/.old/search</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/redirect</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/README.md</loc>
   </url>
 </urlset>
