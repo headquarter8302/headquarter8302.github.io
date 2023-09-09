@@ -1,4 +1,3 @@
-// Prevent cookies to being set, at all.
 const cursor = document.getElementById("cursor");
 const links = document.querySelectorAll("a");
 
