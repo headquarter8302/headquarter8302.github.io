@@ -1,17 +1,25 @@
 // Prevent cookies to being set, at all.
-document.__defineGetter__("cookie", function() { return '';} );
-document.__defineSetter__("cookie", function() {} );
+const cursor = document.getElementById("cursor");
+const links = document.querySelectorAll("a");
 
-let isChanged = false;
-function changeTheme() {
-  if (isChanged) {
-    document.getElementById('html').style.filter = "initial";
-    isChanged = false;
+links.forEach(function (e) {
+  e.addEventListener("mouseover", function () {
+    cursor.classList.add("link-hover");
+  });
+
+  e.addEventListener("mouseout", function () {
+    cursor.classList.remove("link-hover");
+  });
+});
+
+document.addEventListener("mousemove", function (e) {
+  if (cursor.classList.contains("link-hover")) {
+    cursor.style.transform = `translate(${e.clientX - 25}px, ${e.clientY - 25}px)`;
   } else {
-    document.getElementById('html').style.filter = "invert\(1\)";
-    isChanged = true;
+    cursor.style.transform = `translate(${e.clientX - 10}px, ${e.clientY - 10}px)`;
   }
-}
+  cursor.style.display = "block";
+});
 
 console.log(
   "%cWhatchoo doin here?",
