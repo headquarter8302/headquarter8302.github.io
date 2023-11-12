@@ -77,7 +77,7 @@ main {
 }
 
 #container {
-  margin: auto auto 5% 5%;
+  margin: auto auto 1% 1%;
   display: grid;
   position: relative;
   bottom: 0;
@@ -104,7 +104,7 @@ main {
   display: flex;
   text-align: center;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
   
   & div {
     flex: flex-grow 1fr;
