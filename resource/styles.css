@@ -15,6 +15,10 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  min-height: 100%;
+  min-width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 *,
@@ -42,34 +46,6 @@ a:hover {
   font-weight: bold;
 }
 
-main {
-  width: 100%;
-  height: 100%;
-}
-
-div#container {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-
-  justify-content: center;
-  align-items: center;
-
-  & * {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-    width: 50%;
-  }
-
-  & div#primary h1#title {
-    font-family: monospace;
-  }
-
-  & div#secondary {}
-}
-
 #cursor {
   z-index: -1;
   border-radius: 100vw;
@@ -80,11 +56,61 @@ div#container {
   box-shadow: 0 0 20px black;
   position: absolute;
 
-  transition: transform 50ms ease-out, background-color 50ms ease-out, width 100ms ease-out;
+  transition: transform 50ms ease-out, background-color 50ms ease-out, width 100ms ease-out, outline 50ms ease-in-out;
 }
 
 #cursor.link-hover {
   background: blue;
   box-shadow: 0 0 20px blue;
   width: 50px;
+}
+
+#cursor.clicked {
+  outline: 2px solid white;
+}
+
+* {
+  outline: 1px solid white;
+}
+
+/* Past boilerplate */
+main {
+  display: flex;
+  align-self: end;
+  min-height: 100%;
+}
+
+#container {
+  margin: auto auto 5% 5%;
+  display: grid;
+  position: relative;
+  bottom: 0;
+  height: fit-content;
+  width: 90%;
+}
+
+#primary {
+  width: max(50%);
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  
+  & :last-child {
+    align-self: center;
+    position: relative;
+    right: 0;
+    margin-left: auto;
+  }
+}
+
+#secondary {
+  width: max(50%);
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  
+  & div {
+    flex: flex-grow 1fr;
+  }
 }
