@@ -48,21 +48,21 @@ a:visited {
   display: none;
   width: 20px;
   aspect-ratio: 1/1;
-  background: black;
+  background: white;
   box-shadow: 0 0 20px black;
   position: absolute;
 
-  transition: transform 50ms ease-out, background-color 50ms ease-out, width 100ms ease-out, outline 50ms ease-in-out;
+  transition: transform 50ms ease-in-out, background 50ms ease-in-out, background-color 50ms ease-out, width 100ms ease-out, outline 50ms ease-in-out;
 }
 
 #cursor.link-hover {
-  background: blue;
-  box-shadow: 0 0 20px blue;
+  box-shadow: 0 0 20px currentColor;
   width: 50px;
 }
 
 #cursor.clicked {
   outline: 2px solid white;
+  background: transparent; 
 }
 
 /* Past boilerplate */
