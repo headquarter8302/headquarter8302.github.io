@@ -28,7 +28,7 @@ body {
 }
 
 body {
-  background: #0d0d0d;
+  background-color: #0d0d0d;
   color: whitesmoke;
   font-family: "Inter", sans-serif;
 }
@@ -40,10 +40,6 @@ a {
 
 a:visited {
   color: rgb(113, 43, 226);
-}
-
-a:hover {
-  font-weight: bold;
 }
 
 #cursor {
@@ -77,21 +73,21 @@ main {
 }
 
 #container {
-  margin: auto auto 1% 1%;
+  margin: auto;
   display: grid;
   position: relative;
   bottom: 0;
   height: fit-content;
-  width: 90%;
+  width: 50%;
 }
 
 #primary {
-  width: max(50%);
+  width: max(100%);
   display: flex;
   align-content: center;
   flex-wrap: wrap;
   
-  & :last-child {
+  :last-child {
     align-self: center;
     position: relative;
     right: 0;
@@ -100,7 +96,7 @@ main {
 }
 
 #secondary {
-  width: max(50%);
+  width: max(100%);
   display: flex;
   text-align: center;
   flex-wrap: wrap;
@@ -108,5 +104,17 @@ main {
   
   & div {
     flex: flex-grow 1fr;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+   background-color: #f2f2f2;
+   color: black;
+  }
+
+  img,
+  #cursor {
+   filter: invert(1);
   }
 }
