@@ -60,6 +60,10 @@ a:visited {
   width: 50px;
 }
 
+#cursor.link-hover:is(:hover(img)) {
+  background: transparent;
+}
+
 #cursor.clicked {
   outline: 2px solid white;
   background: transparent; 
