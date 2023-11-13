@@ -58,15 +58,11 @@ a:visited {
 #cursor.link-hover {
   box-shadow: 0 0 20px currentColor;
   width: 50px;
-}
-
-#cursor.link-hover:is(:hover(img)) {
   background: transparent;
 }
 
 #cursor.clicked {
   outline: 2px solid white;
-  background: transparent; 
 }
 
 /* Past boilerplate */
