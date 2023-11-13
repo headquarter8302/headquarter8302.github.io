@@ -56,7 +56,7 @@ a:visited {
 }
 
 #cursor.link-hover {
-  box-shadow: 0 0 20px currentColor;
+  box-shadow: 0 0 20px white;
   width: 50px;
   background: transparent;
 }
