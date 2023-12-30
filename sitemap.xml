@@ -4,27 +4,24 @@
     <loc>https://headquarter8302.github.io/</loc>
   </url>
   <url>
-    <loc>https://headquarter8302.github.io/.old/cache</loc>
-  </url>
-  <url>
-    <loc>https://headquarter8302.github.io/.old/index</loc>
-  </url>
-  <url>
-    <loc>https://headquarter8302.github.io/.old/links</loc>
-  </url>
-  <url>
-    <loc>https://headquarter8302.github.io/.old/octocat</loc>
-  </url>
-  <url>
-    <loc>https://headquarter8302.github.io/.old/scp-htf2</loc>
-  </url>
-  <url>
-    <loc>https://headquarter8302.github.io/.old/search</loc>
-  </url>
-  <url>
     <loc>https://headquarter8302.github.io/redirect</loc>
   </url>
   <url>
-    <loc>https://headquarter8302.github.io/README.md</loc>
+    <loc>https://headquarter8302.github.io/blog/</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/blog/2023/12/21/override-chrome-policies.html</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/blog/2023/12/08/clone-your-data.html</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/blog/2023/11/25/first-real-blog.html</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/blog/2023/11/25/dev-diary-1.html</loc>
+  </url>
+  <url>
+    <loc>https://headquarter8302.github.io/blog/2023/11/16/test.html</loc>
   </url>
 </urlset>
