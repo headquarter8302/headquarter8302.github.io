@@ -1,0 +1,3 @@
+# Any inquiries regarding security should be directed to headquarter8302 on github.com
+Preferred-Languages: en
+Canonical: https://headquarter8302.github.io/security.txt
