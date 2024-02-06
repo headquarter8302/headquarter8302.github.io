@@ -56,13 +56,13 @@ a:visited {
 }
 
 #cursor.link-hover {
-  box-shadow: 0 0 20px white;
   width: 50px;
+  outline: 2px solid white;
   background: transparent;
 }
 
 #cursor.clicked {
-  outline: 2px solid white;
+  backdrop-filter: invert(1);
 }
 
 /* Past boilerplate */
