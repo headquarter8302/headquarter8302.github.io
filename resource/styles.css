@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url(Inter.ttf) format("truetype");
+  font-family: Inter;
+  src: url("Inter.ttf") format("truetype");
 }
 
 html,
