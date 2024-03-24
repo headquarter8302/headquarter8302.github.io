@@ -113,7 +113,7 @@ main {
    color: black;
   }
 
-  img,
+  img:not(.img-noinvert),
   #cursor {
    filter: invert(1);
   }
