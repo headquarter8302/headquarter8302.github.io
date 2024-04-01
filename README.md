@@ -3,5 +3,5 @@
 I forgot this existed.
 
 Sub-sites:
-- [/music](https://headquarter8302.github.io/music)
-- [/blog](https://headquarter8302.github.io/blog)
+- [/music](https://github.com/headquarter8302/music)
+- [/blog](https://github.com/headquarter8302/blog)
