@@ -89,6 +89,5 @@ function applyCopyclick(elems) {
   });
 }
 
-applyCopyclick(document.getElementsByClassName("copyclick"));
-
 new Cursor();
+applyCopyclick(document.getElementsByClassName("copyclick"));

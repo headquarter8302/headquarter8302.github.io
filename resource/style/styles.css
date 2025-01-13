@@ -1,11 +1,30 @@
+@property --bg-hsl-deg {
+  syntax: '<angle>';
+  initial-value: 0;
+  inherits: false;
+}
+
+@property --heading-hsl-deg {
+  syntax: '<angle>';
+  initial-value: 0;
+  inherits: false;
+}
+
 :root {
-  --bg-color: hsl(230, 15%, 10%);
+  --bg-color-static: hsl(230, 15%, 10%);
+  --bg-hsl-deg: 230deg;
+  --bg-color-dynamic: hsl(var(--bg-hsl-deg), 15%, 10%);
+  --heading-hsl-deg: 0deg;
+  --heading-color-dynamic: hsl(var(--heading-hsl-deg), 50%, 75%);
   --font-c: hsl(0, 0%, 95%);
   --heading-size: max(2em, 3vw);
   --emphasis-size: max(2em, 2vw);
   --content-inline-margin: 15%;
+  --content-block-padding: 5vw;
   --fader-height: 2.5vh;
   --section-brightness: brightness(1.75);
+
+  scrollbar-color: var(--font-c) var(--bg-color-static);
 }
 
 @media (prefers-reduced-motion) {
@@ -21,7 +40,7 @@
     color: white !important;
   } */
 
-  *:not(a) {
+  *:not(a, section, div) {
     outline: 1px solid white;
   }
 
@@ -37,43 +56,35 @@
 
 @keyframes bg-anim {
   0% {
-    background-color: hsl(180deg, 25%, 10%);
-  }
-
-  25% {
-    background-color: hsl(270deg, 25%, 10%);
-  }
-
-  75% {
-    background-color: hsl(360deg, 25%, 10%);
+    --bg-hsl-deg: 0deg;
   }
 
   100% {
-    background-color: hsl(90deg, 25%, 10%);
+    --bg-hsl-deg: 360deg;
   }
 }
 
 @keyframes h1-anim {
   0% {
-    color: hsl(0deg, 50%, 75%);
+    --heading-hsl-deg: 0deg;
   }
 
   25% {
-    color: hsl(180deg, 50%, 75%);
+    --heading-hsl-deg: 180deg;
   }
 
   75% {
-    color: hsl(270deg, 50%, 75%);
+    --heading-hsl-deg: 270deg;
   }
 
   100% {
-    color: hsl(360deg, 50%, 75%);
+    --heading-hsl-deg: 90deg;
   }
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg-color: hsl(230, 15%, 80%);
+    --bg-color-static: hsl(230, 15%, 80%);
     --font-c: hsl(0, 0%, 5%);
     --img-brightness-filter: brightness(0);
     --section-brightness: brightness(0.85);
@@ -126,7 +137,7 @@
 
 body {
   /* fallback color */
-  background-color: var(--bg-color);
+  background-color: var(--bg-color-dynamic);
   color: var(--font-c);
   font-family: "Inter", sans-serif;
 
@@ -180,8 +191,6 @@ hr.gray-fader-out {
 
 /* Past boilerplate */
 #index {
-  font-family: "Inter", sans-serif;
-
   main {
     display: flex;
     justify-content: center;
@@ -255,7 +264,7 @@ hr.gray-fader-out {
   }
 
   section {
-    padding-block: 5vw;
+    padding-block: var(--content-block-padding);
     padding-inline: var(--content-inline-margin);
   }
 
@@ -273,7 +282,7 @@ hr.gray-fader-out {
 
   footer {
     font-size: smaller;
-    padding-inline: 5vw;
+    padding-inline: var(--content-inline-margin);
     padding-block: 1vh;
     backdrop-filter: var(--section-brightness);
     color: gray;
