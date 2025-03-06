@@ -279,12 +279,10 @@ body#index {
   section {
     padding-block: var(--content-block-padding);
     padding-inline: var(--content-inline-margin);
-  }
-
-  .blog-container {
-    /* background-color: rgba(127, 127, 127, 0.25); */
     backdrop-filter: var(--section-brightness);
   }
+
+  .blog-container {}
 
   .contact-container {}
 }
