@@ -155,6 +155,10 @@ a {
   height: 100vh;
 }
 
+.fill-viewport-half {
+  height: 50vh;
+}
+
 .fill-viewport-full.fader-space {
   /* height: calc(100vh - var(--fader-height)); */
   height: calc(100vh);
