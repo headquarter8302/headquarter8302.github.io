@@ -1,27 +1,26 @@
 @property --bg-hsl-deg {
   syntax: '<angle>';
-  initial-value: 0;
+  initial-value: 0deg;
   inherits: false;
 }
 
 @property --heading-hsl-deg {
   syntax: '<angle>';
-  initial-value: 0;
+  initial-value: 0deg;
   inherits: false;
 }
 
 :root {
   --bg-color-static: hsl(230, 15%, 10%);
-  --bg-hsl-deg: 230deg;
-  --bg-color-dynamic: hsl(var(--bg-hsl-deg), 15%, 10%);
-  --heading-hsl-deg: 0deg;
-  --heading-color-dynamic: hsl(var(--heading-hsl-deg), 50%, 75%);
   --font-c: hsl(0, 0%, 95%);
+
   --heading-size: max(2em, 3vw);
   --emphasis-size: max(2em, 2vw);
+
   --content-inline-margin: 15%;
   --content-block-padding: 5vw;
   --fader-height: 2.5vh;
+
   --section-brightness: brightness(1.75);
 
   scrollbar-color: var(--font-c) var(--bg-color-static);
@@ -56,11 +55,11 @@
 
 @keyframes bg-anim {
   0% {
-    --bg-hsl-deg: 0deg;
+    --bg-hsl-deg: 230deg;
   }
 
   100% {
-    --bg-hsl-deg: 360deg;
+    --bg-hsl-deg: 0deg;
   }
 }
 
@@ -137,12 +136,12 @@
 
 body {
   /* fallback color */
-  background-color: var(--bg-color-dynamic);
+  background-color: hsl(var(--bg-hsl-deg), 25%, 10%);
   color: var(--font-c);
   font-family: "Inter", sans-serif;
 
-  transition: background-color 1s;
-  animation: bg-anim 30s linear infinite;
+  /* transition: background-color 1s; */
+  animation: bg-anim 120s linear infinite;
 }
 
 a {
@@ -193,8 +192,18 @@ hr.gray-fader-out {
   background-color: rgba(127, 127, 127, 0.5);
 }
 
+h1 {
+  font-size: var(--heading-size);
+  margin-block-end: 1vh;
+}
+
+h2 {
+  font-size: var(--emphasis-size);
+  margin-block-end: 1vh;
+}
+
 /* Past boilerplate */
-#index {
+body#index {
   main {
     display: flex;
     justify-content: center;
@@ -210,8 +219,8 @@ hr.gray-fader-out {
   }
 
   #hero h1 {
-    font-size: var(--heading-size);
-    animation: h1-anim 5s linear infinite;
+    color: hsl(var(--heading-hsl-deg), 50%, 75%);
+    animation: h1-anim 10s linear infinite;
   }
 
   #description {
@@ -272,23 +281,25 @@ hr.gray-fader-out {
     padding-inline: var(--content-inline-margin);
   }
 
-  #blog {
+  .blog-container {
     /* background-color: rgba(127, 127, 127, 0.25); */
     backdrop-filter: var(--section-brightness);
   }
 
-  h2 {
-    font-size: var(--emphasis-size);
-    margin-block-end: 1vh;
-  }
+  .contact-container {}
+}
 
-  #contact {}
-
-  footer {
-    font-size: smaller;
-    padding-inline: var(--content-inline-margin);
-    padding-block: 1vh;
-    backdrop-filter: var(--section-brightness);
-    color: gray;
+body#blog {
+  section {
+    margin-inline: var(--content-inline-margin);
+    padding-block: var(--content-block-padding);
   }
+}
+
+footer {
+  font-size: smaller;
+  padding-inline: var(--content-inline-margin);
+  padding-block: 1vh;
+  backdrop-filter: var(--section-brightness);
+  color: gray;
 }
