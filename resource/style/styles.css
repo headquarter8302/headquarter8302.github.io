@@ -281,7 +281,7 @@ body#index {
     padding-inline: var(--content-inline-margin);
   }
 
-  section:nth-child(odd) {
+  section:nth-child(even) {
     backdrop-filter: var(--section-brightness);
   }
 
