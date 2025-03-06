@@ -8,13 +8,13 @@ name: Lint Code Base
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "master", "staging" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "master", "staging" ]
 jobs:
   run-lint:
     runs-on: ubuntu-latest
-  
+
     permissions:
       contents: read
       packages: read
