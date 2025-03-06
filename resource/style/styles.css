@@ -279,6 +279,9 @@ body#index {
   section {
     padding-block: var(--content-block-padding);
     padding-inline: var(--content-inline-margin);
+  }
+
+  section:nth-child(odd) {
     backdrop-filter: var(--section-brightness);
   }
 
