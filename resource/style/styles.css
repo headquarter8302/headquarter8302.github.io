@@ -281,10 +281,11 @@ body#index {
     padding-inline: var(--content-inline-margin);
   }
 
-  .blog-container {
-    /* background-color: rgba(127, 127, 127, 0.25); */
+  section:nth-child(even) {
     backdrop-filter: var(--section-brightness);
   }
+
+  .blog-container {}
 
   .contact-container {}
 }
