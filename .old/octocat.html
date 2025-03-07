@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+
+    Made using pure boredom by Markus M. (headquarter8302)
+
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://github.githubassets.com/images/mona-loading-dark.gif" type="image/x-icon">
+    <title>Octocat</title>
+    <link rel="preload" href="https://github.githubassets.com/images/mona-loading-dark.gif" as="image">
+    <link rel="preload" href="https://www.bensound.com/bensound-music/bensound-retrosoul.mp3" as="audio">
+    <meta property="og:title" content="Admire Octocat">
+    <meta property="og:site_name" content="Octocat">
+    <meta property="og:url" content="https://headquarter8302.github.io/octocat">
+    <meta property="og:description" content="Admire the mighty Octocat GIF">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://github.githubassets.com/images/mona-loading-dark.gif">
+    <style>
+        body, html {
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            background-color: antiquewhite;
+            height: 100%;
+        }
+
+        p {
+            box-shadow: 0 0 5px grey;
+            padding: 2%;
+            margin: 2%;
+        }
+        
+        img {
+            image-rendering: pixelated;
+        }
+    </style>
+</head>
+<body>
+    <audio controls loop autoplay>
+        <source src="https://www.bensound.com/bensound-music/bensound-retrosoul.mp3" type="audio/mpeg">
+        Your browser does not support the audio element. Ew
+    </audio>
+    <h1>Octocat</h1>
+    <img src="https://github.githubassets.com/images/mona-loading-dark.gif" alt="Octocat" width="500px">
+    <p>You've been admiring the Octocat for about <span id="time">0</span> seconds.</p>
+</body>
+<script>
+    const timer = document.getElementById("time")
+    let counter = 0
+
+    setInterval(count, 1000);
+
+    function count() {
+        timer.innerText = counter
+        ++counter
+    }
+</script>
+</html>

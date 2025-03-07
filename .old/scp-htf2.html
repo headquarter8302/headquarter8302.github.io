@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!-- Someone asked me to create this, might make a template out of this if I remember to do it -->
+<html lang="en" dir="ltr">
+<head>
+  <title>SCP-HTF2 | headquarter8302</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Test website hosted in GitHub by Headquarter8302">
+  <meta name="robots" content="noindex">
+  <meta content="author" content="Headquarter8302">
+  <meta content="author" content="Markus">
+  <link rel="canonical" href="https://headquarter8302.github.io/">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="icon" href="resource/github-favicon.ico">
+  <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@keyframes entry {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+* {
+  opacity: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Inter', sans-serif;
+  animation: entry 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+}
+
+body {
+  text-align: center;
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  background-color: #F5F5F5;
+}
+
+#wrapper {
+  margin: 1%;
+}
+
+#info-wrapper {
+  display: flex;
+  flex-direction: row;
+  font-size: xx-large;
+  font-weight: bold;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+#item {
+  white-space: nowrap;
+  text-align: left;
+}
+
+.small {
+  font-size: smaller;
+}
+
+#bar {
+  width: 100%;
+  margin-left: 1%;
+  margin-right: 1%;
+  background-color: rgb(0, 135, 189);
+}
+
+#clearance {
+  text-align: right;
+}
+
+#acs {
+  display: flex;
+  margin-top: 1%;
+  padding-top: 1%;
+  border-top: 10px solid black;
+}
+
+#containmnet {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: large;
+  background-color: rgba(0,0,0,0.2);
+  text-align: left;
+  border-left: 10px solid yellow;
+  padding-left: 1%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.light {
+  font-weight: normal;
+}
+
+#class {
+  flex-grow: 1;
+  font-weight: bold;
+  font-size: large;
+  text-align: left;
+  margin-left: 1%;
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-right: 10px solid black;
+}
+
+#disruption {
+  background-color: rgba(0,0,0,0.2);
+  font-weight: bold;
+  font-size: large;
+  text-align: left;
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-left: 10px solid rgb(0, 135, 189);
+}
+
+#risk {
+  background-color: rgba(0,0,0,0.2);
+  font-weight: bold;
+  font-size: large;
+  text-align: left;
+  margin-top: 1%;
+  padding-left: 1%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  border-left: 10px solid rgb(0, 135, 189);
+}
+
+#image {
+  margin: 1% auto;
+  width: 75%;
+}
+
+img {
+  border: 3px solid grey;
+  border-radius: 10px;
+}
+
+#subtitle {
+  margin: auto;
+  background-color: rgba(0,0,0,0.2);
+  border: 3px solid gray;
+  border-radius: 0 0 10px 10px;
+  width: 75%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+}
+
+.box {
+  text-align: justify;
+  border-left: 10px solid grey;
+  border-right: 10px solid grey;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: black;
+  color: white;
+  padding: 1%;
+  display: block;
+  transition: all 500ms;
+}
+
+footer:hover {
+  font-size: larger;
+  filter: invert(1);
+}
+
+code {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 1px;
+  box-shadow: 1px 1px grey;
+}
+</style>
+</head>
+<body>
+<div id="wrapper">
+  <div id="info-wrapper">
+    <div id="item"><span class="small">ITEM#:</span> SCP-HTF2</div>
+    <div id="bar"></div>
+    <div id="clearance">LEVEL 2<br><span class="small">RESTRICTED</span></div>
+  </div>
+  <div id="acs">
+    <div id="containmnet">
+      <span class="light">CONTAINMENT CLASS:</span><br>
+      EUCLID
+    </div>
+    <div id="class">
+      <div id="disruption">
+        <span class="light">DISRUPTION CLASS:</span><br>
+        VLAM
+      </div>
+      <div id="risk">
+        <span class="light">RISK CLASS:</span><br>
+        CAUTION
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div id="image">
+    <img src="https://media.discordapp.net/attachments/798130192014770207/881117388974719026/sketch-1630142712559.png" width="75%" alt="Image of SCP-HTF2">
+    <div id="subtitle">SCP-HTF2 in containment.</div>
+  </div>
+  <div class="box">
+    <h2>SPECIAL CONTAINMENT PROCEDURES</h2>
+    <p>SCP-HTF2 is currently contained on a prison cell inside D-Class sector [REDACTED] of Site-19. It is to be monitored 24 hours through either a nightguard, or a CCTV. A hay bale is to be placed inside SCP-HTF2's cell and should be replaced monthly.</p>
+    <p>In case of a containment breach, a team of Foundation serpentologist is to be dispatched to the scene immediately.</p>
+  </div>
+  <div class="box">
+    <h2>DESCRIPTION</h2>
+    <p>SCP-HTF2 is a 3 meter long <i>Opheodrys vernalis</i> with it's head being the Heavy character from the Valve Corporation released game, Team Fortress 2. The bodily functions and components of SCP-HTF2 is exactly the same as the average Opheodrys vernalis species, the only difference and anomalous aspects of the anomaly is recorded from the "neck" area to the head. The head functions exactly like a human head, aside from the neck immediately terminating at the base of the skull.</p>
+    <p>SCP-HTF2 behaves as the same as a normal snake, the only anomalous aspect of it is the ability to eject bullets from it's fangs, as opposed to venom, which travels at the speed of approximately 850 meters per second. However, when SCP-HTF2 clings on to a prey, it would inject it's prey with smooth green snake venom, rather than the previously mentioned bullet.</p>
+    <p>SCP-HTF2 could resize, reshape and shrink itself to any size possible, becoming as small as 2 nanometers in length. The only way SCP-HTF2 could be contained is to make all sides of the containment chamber a prison style jail bars, and a hay bale where SCP-HTF2 could rest.</p>
+  </div>
+</div>
+
+<footer>SCP file and design by headquarter8302, original idea by <code>gaming_person1237#1865</code></footer>
+</body>
+</html>
