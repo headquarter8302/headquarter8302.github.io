@@ -1,0 +1,53 @@
+---
+import { getCollection } from "astro:content";
+import BlogStyles from "../components/styles/BlogStyles.astro";
+import Main from "../layouts/Main.astro";
+import Section from "../components/Section.astro";
+import ReturnHome from "../components/ReturnHome.astro";
+
+import { BodyIdentifiers } from "../..";
+
+const posts = await getCollection("blog");
+const sortedPosts = posts.sort(
+  (a, b) => b.data.date.getTime() - a.data.date.getTime(),
+);
+---
+
+<style>
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1vw;
+    padding-block-end: var(--content-block-padding);
+    padding-inline: var(--content-inline-margin);
+    list-style-type: none;
+  }
+
+  li {
+    backdrop-filter: var(--section-brightness);
+    padding: 1vw;
+    border-radius: 8px;;
+
+    a {
+      font-size: 120%;
+    }
+  }
+</style>
+<Main title="headquarter8302 - blog" bodyId={BodyIdentifiers.Blog}>
+  <Section id="blogintro" classes="fill-viewport-half">
+    <ReturnHome />
+    <h1>Blogs</h1>
+    <p>Writings and posts from me</p>
+  </Section>
+  <ul>
+    {
+      sortedPosts.map((post) => (
+        <li data-key={post.id}>
+          <a href={`/blog/${post.slug}`}>{post.data.title}</a>
+          <p>{post.data.description}</p>
+          <small>{new Date(post.data.date).toLocaleDateString()}</small>
+        </li>
+      ))
+    }
+  </ul>
+</Main>

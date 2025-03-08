@@ -1,0 +1,21 @@
+---
+import FooterLicenseText from "./FooterLicenseText.astro";
+---
+
+<style>
+  footer {
+    font-size: smaller;
+    padding-block: 1vh;
+    backdrop-filter: var(--section-brightness);
+    color: gray;
+    text-align: center;
+  }
+
+  p {
+    display: inline;
+  }
+</style>
+<footer>
+  <p>Generated using {Astro.generator}.</p>
+  <FooterLicenseText />
+</footer>

@@ -1,0 +1,30 @@
+---
+import type { FaderType } from "../..";
+interface Props {
+  faderType: FaderType;
+}
+const { faderType } = Astro.props;
+---
+
+<style>
+  hr.gray-fader-in {
+    height: var(--fader-height);
+    border: 0;
+    background-image: linear-gradient(
+      to bottom,
+      transparent,
+      rgba(127, 127, 127, 0.25)
+    );
+  }
+
+  hr.gray-fader-out {
+    height: var(--fader-height);
+    /* border: 0; */
+    background-image: linear-gradient(
+      to bottom,
+      rgba(127, 127, 127, 0.25),
+      transparent
+    );
+  }
+</style>
+<hr class={faderType} />

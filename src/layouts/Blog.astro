@@ -1,0 +1,48 @@
+---
+import BlogStyles from "../components/styles/BlogStyles.astro";
+import Main from "../layouts/Main.astro";
+import ReturnHome from "../components/ReturnHome.astro";
+
+import { BodyIdentifiers } from "../..";
+
+const { postTitle, postDesc, postPublish, postTags } = Astro.props;
+---
+
+<style is:global>
+  article {
+    margin-inline: 10vw;
+    margin-block: 5vh;
+  }
+
+  h2 {
+    font-size: calc(var(--heading-size) * 50/100);
+  }
+
+  header {
+    padding-block: 2vh;
+    border-block-end: 1px solid gray;
+    margin-block-end: 2vh;
+  }
+
+  li {
+    margin-block-end: 1em;
+  }
+</style>
+<Main
+  title={`${postTitle} - headquarter8302 - blog`}
+  bodyId={BodyIdentifiers.Blog}
+>
+  <BlogStyles />
+  <article>
+    <header>
+      <ReturnHome link="/bloglist" text="to blog list" />
+      <hgroup>
+        <h1>{postTitle}</h1>
+        <h2>{postDesc}</h2>
+      </hgroup>
+      <div class="date">{postPublish}</div>
+      <div class="tags">{postTags}</div>
+    </header>
+    <slot />
+  </article>
+</Main>

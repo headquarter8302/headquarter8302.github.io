@@ -1,0 +1,55 @@
+---
+// filepath:
+import { Image } from "astro:assets";
+
+import Main from "../layouts/Main.astro";
+
+import { BodyIdentifiers } from "../..";
+
+import IndexStyles from "../components/styles/IndexStyles.astro";
+import Section from "../components/Section.astro";
+
+import RickrollImage from "../assets/img/rickroll.svg";
+import GitHubLogoImage from "../assets/img/github-mark-white.svg";
+import PencilImage from "../assets/img/pencil-solid.svg";
+import MusicImage from "../assets/img/music.svg";
+---
+
+<IndexStyles />
+<Main title="headquarter8302" bodyId={BodyIdentifiers.Main}>
+	<main class="fill-viewport-full fader-space" id="main">
+		<div class="hero-container">
+			<div id="hero">
+				<h1>headquarter8302</h1>
+			</div>
+			<div id="description" class="text-right">Hi. I'm Mark.</div>
+			<aside>
+				<p>
+					I'm currently redesigning this site for the <i>n</i>-th amount of
+					time, my apologies in advance if there are odd things on display.
+				</p>
+			</aside>
+			<nav id="links">
+				<a href="redirect"><Image src={RickrollImage} alt="Rickroll" /></a>
+				<a href="https://github.com/headquarter8302"
+					><Image src={GitHubLogoImage} alt="GitHub" /></a
+				>
+				<a href="bloglist"><Image src={PencilImage} alt="Blog" /></a>
+				<a href="music"><Image src={MusicImage} alt="Music" /></a>
+			</nav>
+		</div>
+	</main>
+	<Section id="blog" class="blog-container fill-viewport-half" heading="Blog">
+		<h2>Blog</h2>
+		<a href="/bloglist">Go to blog listing page</a>
+		<p>There's supposed to be a blog preview here.</p>
+	</Section>
+	<Section id="contact" class="contact-container">
+		<h2>Contact</h2>
+		<ul>
+			<li>Discord: <code>headquarter8302</code></li>
+			<li>GitHub: <code>headquarter8302</code></li>
+			<li>Pretty much everywhere else: <code>headquarter8302</code></li>
+		</ul>
+	</Section>
+</Main>
