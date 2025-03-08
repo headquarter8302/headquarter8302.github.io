@@ -33,8 +33,9 @@ jobs:
           name: astro-build
           path: dist
   deploy:
+    needs: build
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Download build artifact
         uses: actions/download-artifact@v4.1.9
