@@ -41,6 +41,7 @@ jobs:
         uses: actions/download-artifact@v4.1.9
         with:
           name: astro-build
+          path: ./dist
 
       - name: Log directory
         run: |
