@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+  
+  <head>
+  <script type="module">console.log("%cHey","font-family:sans-serif;font-size:2em;background-color: rgb(12 32 32);padding:.25em");class e{static cursor=document.getElementById("cursor");static links=document.querySelectorAll("a");constructor(){if(e.cursor)e.handleClick(),e.linkHover(),e.handleMove();else{console.warn("[Cursor] No cursor element!");return}}static handleClick(){document.addEventListener("mousedown",()=>{e.cursor.classList.add("clicked")}),document.addEventListener("mouseup",()=>{e.cursor.classList.remove("clicked")})}static linkHover(){e.links.forEach(function(t){t.addEventListener("mouseover",function(){e.cursor.classList.add("link-hover")}),t.addEventListener("mouseout",function(){e.cursor.classList.remove("link-hover")})})}static handleMove(){document.addEventListener("mousemove",function(t){e.cursor.classList.contains("link-hover")?e.cursor.style.transform=`translate(${t.clientX-77}px, ${t.clientY-77}px)`:e.cursor.style.transform=`translate(${t.clientX}px, ${t.clientY}px)`,e.cursor.style.display="block"})}}function c(n){for(const t of n)t.addEventListener("click",()=>{navigator.clipboard.writeText(t.innerText),window.alert("License text copied!")})}new e;document.getElementsByClassName("copyclick")&&c(document.getElementsByClassName("copyclick"));</script>
+  <meta name="google-site-verification" content="QVdp83jS-PldpMm1mki9mNymeRbxwrjFp0-1jBCpSiI">
+  <meta name="description" content="My personal site in GitHub Pages">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <title>First real blog post here - headquarter8302 - blog</title>
+<style>#homelink.astro-ch4ng4x6{margin-inline-start:1vw}
+article{margin-inline:10vw;margin-block:5vh}h2{font-size:calc(var(--heading-size) * 50/100)}header{padding-block:2vh;border-block-end:1px solid gray;margin-block-end:2vh}li{margin-block-end:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.DZYeE2D6.css"></head>
+  <body id="blog">
+
+  
+  
+  <article>
+    <header>
+      
+<div id="homelink" class="astro-ch4ng4x6">&lt; <a href="/bloglist" class="astro-ch4ng4x6">Return to blog list</a></div>
+      <hgroup>
+        <h1>First real blog post here</h1>
+        <h2>One small step for man, one giant leap for...uh...</h2>
+      </hgroup>
+      <div class="date">Sat Nov 25 2023 00:00:00 GMT+0000 (Coordinated Universal Time)</div>
+      <div class="tags">test, hello-world</div>
+    </header>
+    
+  <p>Hello world the 2nd. Hey there, I’m Mark. I’ve finally set up a proper blog post of mine in here. I think I want to do some more remodelling until I am satisfied with the entire look and feel of <code>/blog</code>.</p>
+
+  </article>
+
+  
+<footer class="astro-sz7xmlte">
+  <p class="astro-sz7xmlte">Generated using Astro v5.4.2.</p>
+  
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" class="copyclick astro-hndavyil" id="license" title="Click/tap to copy license information" data-license-text="This webpage's visual design, code, and contents © 2025 by Markus (headquarter8302) is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/">
+  <span property="dct:title" class="astro-hndavyil">This webpage's visual design, code, and contents</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://headquarter8302.github.io/" class="astro-hndavyil">Markus (headquarter8302)</a> are licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;" class="astro-hndavyil">CC BY 4.0<img style="height:1.25em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="" class="astro-hndavyil"><img style="height:1.25em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="" class="astro-hndavyil"></a> (Click to copy)
+</p>
+</footer>
+</body></html>

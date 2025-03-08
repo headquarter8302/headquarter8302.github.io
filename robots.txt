@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://headquarter8302.github.io/sitemap.xml

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<html lang="en-US" dir="ltr">
+  
+  <head>
+  <script type="module">console.log("%cHey","font-family:sans-serif;font-size:2em;background-color: rgb(12 32 32);padding:.25em");class e{static cursor=document.getElementById("cursor");static links=document.querySelectorAll("a");constructor(){if(e.cursor)e.handleClick(),e.linkHover(),e.handleMove();else{console.warn("[Cursor] No cursor element!");return}}static handleClick(){document.addEventListener("mousedown",()=>{e.cursor.classList.add("clicked")}),document.addEventListener("mouseup",()=>{e.cursor.classList.remove("clicked")})}static linkHover(){e.links.forEach(function(t){t.addEventListener("mouseover",function(){e.cursor.classList.add("link-hover")}),t.addEventListener("mouseout",function(){e.cursor.classList.remove("link-hover")})})}static handleMove(){document.addEventListener("mousemove",function(t){e.cursor.classList.contains("link-hover")?e.cursor.style.transform=`translate(${t.clientX-77}px, ${t.clientY-77}px)`:e.cursor.style.transform=`translate(${t.clientX}px, ${t.clientY}px)`,e.cursor.style.display="block"})}}function c(n){for(const t of n)t.addEventListener("click",()=>{navigator.clipboard.writeText(t.innerText),window.alert("License text copied!")})}new e;document.getElementsByClassName("copyclick")&&c(document.getElementsByClassName("copyclick"));</script>
+  <meta name="google-site-verification" content="QVdp83jS-PldpMm1mki9mNymeRbxwrjFp0-1jBCpSiI">
+  <meta name="description" content="My personal site in GitHub Pages">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta charset="UTF-8">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <title>Dev Diary #1: Look mom! - headquarter8302 - blog</title>
+<style>#homelink.astro-ch4ng4x6{margin-inline-start:1vw}
+article{margin-inline:10vw;margin-block:5vh}h2{font-size:calc(var(--heading-size) * 50/100)}header{padding-block:2vh;border-block-end:1px solid gray;margin-block-end:2vh}li{margin-block-end:1em}
+</style>
+<link rel="stylesheet" href="/_astro/_slug_.DZYeE2D6.css"></head>
+  <body id="blog">
+
+  
+  
+  <article>
+    <header>
+      
+<div id="homelink" class="astro-ch4ng4x6">&lt; <a href="/bloglist" class="astro-ch4ng4x6">Return to blog list</a></div>
+      <hgroup>
+        <h1>Dev Diary #1: Look mom!</h1>
+        <h2>I originally intended this project to die</h2>
+      </hgroup>
+      <div class="date">Sat Nov 25 2023 00:00:00 GMT+0000 (Coordinated Universal Time)</div>
+      <div class="tags">dev-diary</div>
+    </header>
+    
+  <p>Time travel back to February 2nd, 2022. That was the first major delay I made while I was working on this blog. I created a draft post regarding how to build a discord bot- scratch that, I didn’t even make a tutorial, it’s literally just the metadata and that’s it.</p>
+<p><img src="/blog/assets/2023-11-25-dev-diary-1-firstcommits.png" alt="The first few commits done towards the repository" title="The first few commits done towards the repository"></p>
+<p>After that, I left the repository alone for more than a year, left it to rot, unlinked, and looking ugly as heck. I did it injustice.</p>
+<p>That is until today.</p>
+<p>I looked back at my repository list in GitHub again, and hey, at the bottom of it, the <code>blog</code> repo. I had nothing else to do today, so I thought to myself: “Why not breathe life again into this project?”, and so I did.</p>
+<h2 id="stage-1-cleanup">Stage 1: Cleanup</h2>
+<p>There were some remains of the old setup left that cluttered the repository, so I deleted them all, including the skeleton “make a discord bot” post. I also had a lot of cross-repository resource sharing that really messed with styling on this site, especially after I reworked the main root site before this.</p>
+<p>There’s also a teeny-tiny issue that I have, I don’t know anything about Jekyll, or Liquid.</p>
+<h2 id="stage-2-learning">Stage 2: Learning</h2>
+<p>Markdown was the easy part, Jekyll was as easy as looking at the docs, Liquid, however, was the part that irritated me. Being an avid user of <a href="https://mediawiki.org">MediaWiki</a>, I am very accustomed to brackets, brackets everywhere. I thought if I did another thing other than editing wikis, I would have a break from this hell.</p>
+<p>Nope.</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="liquid"><code><span class="line"><span style="color:#E1E4E8">{% </span><span style="color:#85E89D">raw</span><span style="color:#E1E4E8"> %}</span></span>
+<span class="line"><span style="color:#9ECBFF">{% for post in site.posts %}</span></span>
+<span class="line"><span style="color:#9ECBFF">  &#x3C;li class="post-link"></span></span>
+<span class="line"><span style="color:#9ECBFF">  &#x3C;a href="/blog{{ post.url }}">{{ post.title }}&#x3C;/a> (&#x3C;span class="post-tags">{{ post.tags }}&#x3C;/span>) - &#x3C;span class="post-date">{{ post.date | date: "%B %d, %Y" }}&#x3C;/span>&#x3C;/li></span></span>
+<span class="line"><span style="color:#9ECBFF">{% endfor %}</span></span>
+<span class="line"><span style="color:#E1E4E8">{% </span><span style="color:#85E89D">endraw</span><span style="color:#E1E4E8"> %}</span></span></code></pre>
+<p>And worst of all, Liquid behaves differently from what I am used to. Fortunately, ChatGPT is here to help, after some extremely basic courses through the chatbot, I was able to create some pretty OK Jekyll and Liquid setup. It was pretty nice.</p>
+<h2 id="stage-3-rebuilding">Stage 3: Rebuilding</h2>
+<p>Rebuilding everything from scratch. Includes, layouts, templates, assets, everything had to be remade. I started with boilerplating my CSS, created a semantic HTML layout, then the includes like the header and footer.</p>
+<p>One of my main gripes is responsiveness, my main site, as of the time of this writing, is NOT responsive, it’s such a shame. And I remade my main site many more times than this one. I realised one of the big things for creating a responsive layout is to let the browser do its scaling, I don’t even need to set up fancy stuff like viewport units, just good design practices (that came from unfruitful experiences).</p>
+<p>I also prioritised user experience as to keep myself from getting headaches as well, line heights are expanded, content width is lessened but not to the point of an <a href="https://web.archive.org/web/20231102072430/https://visitandorra.com/en/visitor-information/before-you-arrive/passport-visas-customs/">anorexic article</a> (visit the site in a mobile viewport and you’ll see what I mean), and heading sizes are enlargened.</p>
+<h2 id="stage-4-republishing">Stage 4: Republishing</h2>
+<p>When everything is fine again, it was time to publish my first proper blog post: <a href="https://headquarter8302.github.io/blog/2023-11-16-test">https://headquarter8302.github.io/blog/2023-11-16-test</a>. It was simple but it’s honest work.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>It was a fun excercise, and I finally finished my project. Even though I almost left it to die, at least I have a place to write in the future.</p>
+
+  </article>
+
+  
+<footer class="astro-sz7xmlte">
+  <p class="astro-sz7xmlte">Generated using Astro v5.4.2.</p>
+  
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/" class="copyclick astro-hndavyil" id="license" title="Click/tap to copy license information" data-license-text="This webpage's visual design, code, and contents © 2025 by Markus (headquarter8302) is licensed under CC BY 4.0. To view a copy of this license, visit https://creativecommons.org/licenses/by/4.0/">
+  <span property="dct:title" class="astro-hndavyil">This webpage's visual design, code, and contents</span> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://headquarter8302.github.io/" class="astro-hndavyil">Markus (headquarter8302)</a> are licensed under <a href="https://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;" class="astro-hndavyil">CC BY 4.0<img style="height:1.25em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="" class="astro-hndavyil"><img style="height:1.25em!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="" class="astro-hndavyil"></a> (Click to copy)
+</p>
+</footer>
+</body></html>
