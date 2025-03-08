@@ -8,6 +8,9 @@ on:
       - master
       - staging
 
+permissions:
+  id-token: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
