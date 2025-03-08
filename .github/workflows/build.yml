@@ -1,0 +1,31 @@
+name: Build static
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
+      - name: Setup Bun
+        uses: oven-sh/@setup-bun@v2.0.1
+        with:
+          bun-version: latest
+
+      - name: Install dependencies
+        run: bun install
+
+      - name: Build Astro project
+        run: bun run build
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4.6.1
+        with:
+          name: astro-build
+          path: dist

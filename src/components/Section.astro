@@ -1,0 +1,13 @@
+<style>
+  section {
+    padding-block: var(--content-block-padding);
+    padding-inline: var(--content-inline-margin);
+  }
+
+  section:nth-child(even) {
+    backdrop-filter: var(--section-brightness);
+  }
+</style>
+<section id={Astro.props.id} class={Astro.props.class}>
+  <slot />
+</section>

@@ -1,0 +1,9 @@
+---
+const { link, text } = Astro.props;
+---
+<style>
+  #homelink {
+    margin-inline-start: 1vw;
+  }
+</style>
+<div id="homelink">&lt; <a href={link ?? ((link) ? link : "/")}>Return {text ?? ((text) ? text : "home")}</a></div>
