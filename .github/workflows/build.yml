@@ -32,11 +32,15 @@ jobs:
         with:
           name: astro-build
           path: dist
+
   deploy:
     needs: build
     runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4.2.2
+
       - name: Download build artifact
         uses: actions/download-artifact@v4.1.9
         with:
@@ -45,7 +49,7 @@ jobs:
 
       - name: Log directory
         run: |
-          ls | cat
+          ls -la ./dist
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
