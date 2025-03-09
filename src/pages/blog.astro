@@ -1,6 +1,5 @@
 ---
 import { getCollection } from "astro:content";
-import BlogStyles from "../components/styles/BlogStyles.astro";
 import Main from "../layouts/Main.astro";
 import Section from "../components/Section.astro";
 import ReturnHome from "../components/ReturnHome.astro";
@@ -26,7 +25,7 @@ const sortedPosts = posts.sort(
   li {
     backdrop-filter: var(--section-brightness);
     padding: 1vw;
-    border-radius: 8px;;
+    border-radius: 8px;
 
     a {
       font-size: 120%;
