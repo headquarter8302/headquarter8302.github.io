@@ -18,13 +18,22 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   }
 
   header {
-    padding-block: 2vh;
     border-block-end: 1px solid gray;
     margin-block-end: 2vh;
   }
 
   li {
     margin-block-end: 1em;
+  }
+
+  .date, .tags {
+    color: gray;
+    margin-block: 1vh;
+  }
+
+  pre {
+    padding: 1vh;
+    border-radius: 8px;
   }
 </style>
 <Main
@@ -39,7 +48,7 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
         <h2>{postDesc}</h2>
       </hgroup>
       <div class="date">{postPublish}</div>
-      <div class="tags">{postTags}</div>
+      <div class="tags">Tags: {postTags}</div>
     </header>
     <slot />
   </article>
