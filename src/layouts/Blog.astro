@@ -1,9 +1,8 @@
 ---
-import BlogStyles from "../components/styles/BlogStyles.astro";
 import Main from "../layouts/Main.astro";
 import ReturnHome from "../components/ReturnHome.astro";
 
-import { BodyIdentifiers } from "../..";
+import { BodyIdentifiers, RootPages } from "../..";
 
 const { postTitle, postDesc, postPublish, postTags } = Astro.props;
 ---
@@ -19,7 +18,6 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   }
 
   header {
-    padding-block: 2vh;
     border-block-end: 1px solid gray;
     margin-block-end: 2vh;
   }
@@ -27,21 +25,30 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   li {
     margin-block-end: 1em;
   }
+
+  .date, .tags {
+    color: gray;
+    margin-block: 1vh;
+  }
+
+  pre {
+    padding: 1vh;
+    border-radius: 8px;
+  }
 </style>
 <Main
   title={`${postTitle} - headquarter8302 - blog`}
   bodyId={BodyIdentifiers.Blog}
 >
-  <BlogStyles />
   <article>
     <header>
-      <ReturnHome link="/bloglist" text="to blog list" />
+      <ReturnHome link={RootPages.Blog} text="to blog list" />
       <hgroup>
         <h1>{postTitle}</h1>
         <h2>{postDesc}</h2>
       </hgroup>
       <div class="date">{postPublish}</div>
-      <div class="tags">{postTags}</div>
+      <div class="tags">Tags: {postTags}</div>
     </header>
     <slot />
   </article>

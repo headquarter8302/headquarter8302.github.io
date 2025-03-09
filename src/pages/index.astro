@@ -1,10 +1,9 @@
 ---
-// filepath:
 import { Image } from "astro:assets";
 
 import Main from "../layouts/Main.astro";
 
-import { BodyIdentifiers } from "../..";
+import { BodyIdentifiers, RootPages } from "../..";
 
 import IndexStyles from "../components/styles/IndexStyles.astro";
 import Section from "../components/Section.astro";
@@ -34,21 +33,21 @@ import MusicImage from "../assets/img/music.svg";
 				<a href="https://github.com/headquarter8302"
 					><Image src={GitHubLogoImage} alt="GitHub" /></a
 				>
-				<a href="bloglist"><Image src={PencilImage} alt="Blog" /></a>
-				<a href="music"><Image src={MusicImage} alt="Music" /></a>
+				<a href={RootPages.Blog}><Image src={PencilImage} alt="Blog" /></a>
+				<a href={RootPages.Music}><Image src={MusicImage} alt="Music" /></a>
 			</nav>
 		</div>
 	</main>
 	<Section id="blog" class="blog-container fill-viewport-half" heading="Blog">
 		<h2>Blog</h2>
-		<a href="/bloglist">Go to blog listing page</a>
-		<p>There's supposed to be a blog preview here.</p>
+		<a href={RootPages.Blog}>Go to blog listing page</a>
+		<p>There's supposed to be a blog preview here. In the mean time, you can subscribe to <a href="/feed.xml">my RSS feed</a> (Yes, RSS, not Atom. I haven't gotten around to configuring that yet).</p>
 	</Section>
 	<Section id="contact" class="contact-container">
 		<h2>Contact</h2>
 		<ul>
 			<li>Discord: <code>headquarter8302</code></li>
-			<li>GitHub: <code>headquarter8302</code></li>
+			<li>GitHub: <a href="https://github.com/headquarter8302"><code>headquarter8302</code></a></li>
 			<li>Pretty much everywhere else: <code>headquarter8302</code></li>
 		</ul>
 	</Section>
