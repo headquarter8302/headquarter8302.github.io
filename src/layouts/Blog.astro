@@ -1,9 +1,8 @@
 ---
-import BlogStyles from "../components/styles/BlogStyles.astro";
 import Main from "../layouts/Main.astro";
 import ReturnHome from "../components/ReturnHome.astro";
 
-import { BodyIdentifiers } from "../..";
+import { BodyIdentifiers, RootPages } from "../..";
 
 const { postTitle, postDesc, postPublish, postTags } = Astro.props;
 ---
@@ -32,10 +31,9 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   title={`${postTitle} - headquarter8302 - blog`}
   bodyId={BodyIdentifiers.Blog}
 >
-  <BlogStyles />
   <article>
     <header>
-      <ReturnHome link="/bloglist" text="to blog list" />
+      <ReturnHome link={RootPages.Blog} text="to blog list" />
       <hgroup>
         <h1>{postTitle}</h1>
         <h2>{postDesc}</h2>
