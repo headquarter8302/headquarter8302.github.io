@@ -89,6 +89,10 @@ import "@fontsource-variable/inter";
       --section-brightness: brightness(0.85);
     }
 
+    pre {
+      filter: invert(1) hue-rotate(180deg);
+    }
+
     @keyframes bg-anim {
       0% {
         background-color: hsl(270deg, 25%, 80%);
@@ -191,7 +195,7 @@ import "@fontsource-variable/inter";
     margin-block-end: 1vh;
   }
 
-  code {
+  code:not(~ pre) {
     background-color: var(--bg-color-static);
     padding: .25em;
     outline: 1px solid gray;
