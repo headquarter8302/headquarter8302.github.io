@@ -1,10 +1,10 @@
 ---
 import { getCollection } from "astro:content";
-import Main from "../layouts/Main.astro";
-import Section from "../components/Section.astro";
-import ReturnHome from "../components/ReturnHome.astro";
+import Main from "../../layouts/Main.astro";
+import Section from "../../components/Section.astro";
+import ReturnHome from "../../components/ReturnHome.astro";
 
-import { BodyIdentifiers } from "../..";
+import { BodyIdentifiers } from "../../..";
 
 const posts = await getCollection("blog");
 const sortedPosts = posts.sort(
