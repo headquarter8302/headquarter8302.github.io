@@ -1,0 +1,28 @@
+article {
+  margin-inline: 10vw;
+  margin-block: 5vh;
+}
+
+h2 {
+  font-size: calc(var(--heading-size) * 50 / 100);
+}
+
+header {
+  border-block-end: 1px solid gray;
+  margin-block-end: 2vh;
+}
+
+li {
+  margin-block-end: 1em;
+}
+
+.date,
+.tags {
+  color: gray;
+  margin-block: 1vh;
+}
+
+pre {
+  padding: 1vh;
+  border-radius: 8px;
+}
