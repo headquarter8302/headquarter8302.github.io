@@ -5,8 +5,8 @@ export default defineConfig({
   integrations: [
     sitemap({
       filter: (page) =>
-        page.includes(".old") &&
-        page.includes("dumpster"),
+        !page.includes(".old") &&
+        !page.includes("dumpster"),
     })],
   site: 'https://headquarter8302.github.io',
   scopedStyleStrategy: 'class',
