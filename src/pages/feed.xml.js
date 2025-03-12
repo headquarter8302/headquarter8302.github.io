@@ -16,9 +16,7 @@ export async function GET(context) {
       pubDate: post.data.date,
       description: post.data.description,
       link: `/blog/${post.slug}`,
-      content: sanitizeHtml(parser.render(post.body), {
-        allowedTags: sanitizeHtml.defaults.allowedTags.filter(tag => tag !== 'li' || tag !== 'span')
-      })
+      content: sanitizeHtml(parser.render(post.body))
     })),
     customData: `<language>en-ca</language>`
   });
