@@ -10,5 +10,6 @@ const { link, text } = Astro.props;
 </style>
 <div id="homelink">
   &lt; <a href={link ?? (link ? link : RootPages.Index)}
-    >Return {text ?? (text ? text : "home")}</a>
+    >Return {text ?? (text ? text : "home")}</a
+  >
 </div>
