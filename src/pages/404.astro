@@ -1,9 +1,10 @@
 ---
 import Main from "../layouts/Main.astro";
-import ReturnHome from "../components/ReturnHome.astro"
-import Section from "../components/Section.astro"
+import ReturnHome from "../components/ReturnHome.astro";
+import Section from "../components/Section.astro";
 import { BodyIdentifiers } from "../..";
 ---
+
 <style>
   p {
     margin-block: 1vh;
@@ -13,7 +14,16 @@ import { BodyIdentifiers } from "../..";
   <Section>
     <ReturnHome />
     <h1>404 Not Found</h1>
-    <p><code>{Astro.url}</code> cannot be found at this location. There might've been something here before, you mistyped the URL, or the link to this page wasn't correct.</p>
-    <p>If something is <i>supposed</i> to be here, please file an issue at <a href="https://github.com/headquarter8302/headquarter8302.github.io/issues">the repository</a>.</p>
+    <p>
+      <code>{Astro.url}</code> cannot be found at this location. There might've been
+      something here before, you mistyped the URL, or the link to this page wasn't
+      correct.
+    </p>
+    <p>
+      If something is <i>supposed</i> to be here, please file an issue at <a
+        href="https://github.com/headquarter8302/headquarter8302.github.io/issues"
+        >the repository</a
+      >.
+    </p>
   </Section>
 </Main>

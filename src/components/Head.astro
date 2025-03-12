@@ -1,10 +1,9 @@
 ---
-import GlobalScript from "./scripts/GlobalScript.astro";
 const { title } = Astro.props;
 ---
 
 <head>
-  <GlobalScript />
+  <script src="../scripts/global.ts"></script>
   <meta
     name="google-site-verification"
     content="QVdp83jS-PldpMm1mki9mNymeRbxwrjFp0-1jBCpSiI"
@@ -16,6 +15,11 @@ const { title } = Astro.props;
 
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-  <link rel="alternate" href={new URL("feed.xml", Astro.site)} type="application/rss+xml" title="Mark's Blog">
+  <link
+    rel="alternate"
+    href={new URL("feed.xml", Astro.site)}
+    type="application/rss+xml"
+    title="Mark's Blog"
+  />
   <title>{title}</title>
 </head>

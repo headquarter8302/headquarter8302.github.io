@@ -29,7 +29,9 @@ const sortedPosts = posts.sort(
     width: 17em;
     aspect-ratio: 1/1;
     will-change: contents;
-    transition: transform 150ms, filter 150ms;
+    transition:
+      transform 150ms,
+      filter 150ms;
 
     a {
       font-size: 120%;
@@ -41,7 +43,8 @@ const sortedPosts = posts.sort(
     filter: saturate(2);
   }
 
-  li:has(~ li:hover), li:hover ~ li {
+  li:has(~ li:hover),
+  li:hover ~ li {
     filter: opacity(0.25);
   }
 </style>
