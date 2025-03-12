@@ -6,48 +6,14 @@ import ReturnHome from "../../components/ReturnHome.astro";
 
 import { BodyIdentifiers } from "../../..";
 
+import "../../styles/blog.css";
+
 const posts = await getCollection("blog");
 const sortedPosts = posts.sort(
   (a, b) => b.data.date.getTime() - a.data.date.getTime(),
 );
 ---
 
-<style>
-  ul {
-    display: flex;
-    flex-flow: wrap;
-    gap: 2.5vh;
-    padding-block-end: var(--content-block-padding);
-    padding-inline: var(--content-inline-margin);
-    list-style-type: none;
-  }
-
-  li {
-    backdrop-filter: var(--section-brightness);
-    padding: 1em;
-    border-radius: 8px;
-    width: 17em;
-    aspect-ratio: 1/1;
-    will-change: contents;
-    transition:
-      transform 150ms,
-      filter 150ms;
-
-    a {
-      font-size: 120%;
-    }
-  }
-
-  li:hover {
-    transform: scale(1.1) translateY(-2.5%);
-    filter: saturate(2);
-  }
-
-  li:has(~ li:hover),
-  li:hover ~ li {
-    filter: opacity(0.25);
-  }
-</style>
 <Main title="headquarter8302 - blog" bodyId={BodyIdentifiers.Blog}>
   <Section id="blogintro" classes="fill-viewport-half">
     <ReturnHome />
