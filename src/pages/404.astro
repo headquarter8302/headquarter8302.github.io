@@ -1,15 +1,13 @@
 ---
 import Main from "../layouts/Main.astro";
+import { BodyIdentifiers } from "../..";
+
 import ReturnHome from "../components/ReturnHome.astro";
 import Section from "../components/Section.astro";
-import { BodyIdentifiers } from "../..";
+
+import "../styles/404.css";
 ---
 
-<style>
-  p {
-    margin-block: 1vh;
-  }
-</style>
 <Main title="404 - headquarter8302" bodyId={BodyIdentifiers.NotFound}>
   <Section>
     <ReturnHome />
