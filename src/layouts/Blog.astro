@@ -6,6 +6,13 @@ import { BodyIdentifiers, RootPages } from "../..";
 
 import "../styles/blogpost.css"
 
+interface Props {
+  postTitle: string,
+  postDesc: string | undefined,
+  postPublish: Date,
+  postTags: string
+}
+
 const { postTitle, postDesc, postPublish, postTags } = Astro.props;
 ---
 
@@ -13,9 +20,10 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   title={`${postTitle} - headquarter8302 - blog`}
   bodyId={BodyIdentifiers.Blog}
 >
+<ReturnHome link={RootPages.Blog} text="to blog list" />
+<main>
   <article>
     <header>
-      <ReturnHome link={RootPages.Blog} text="to blog list" />
       <hgroup>
         <h1>{postTitle}</h1>
         <h2>{postDesc}</h2>
@@ -25,4 +33,5 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
     </header>
     <slot />
   </article>
+</main>
 </Main>

@@ -51,6 +51,16 @@ body#main {
     }
   }
 
+  h1 {
+    font-size: var(--heading-size);
+    margin-block-end: 1vh;
+  }
+
+  h2 {
+    font-size: var(--emphasis-size);
+    margin-block-end: 1vh;
+  }
+
   @container (max-width: 425px) {
     .hero-container {
       grid-template-columns: minmax(0, 1fr);

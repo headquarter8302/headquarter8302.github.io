@@ -3,11 +3,6 @@ import { RootPages } from "../..";
 const { link, text } = Astro.props;
 ---
 
-<style>
-  #homelink {
-    margin-inline-start: 1vw;
-  }
-</style>
 <div id="homelink">
   &lt; <a href={link ?? (link ? link : RootPages.Index)}
     >Return {text ?? (text ? text : "home")}</a

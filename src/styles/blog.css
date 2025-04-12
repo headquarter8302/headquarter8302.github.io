@@ -4,7 +4,15 @@ ul {
   gap: 2.5vh;
   padding-block-end: var(--content-block-padding);
   padding-inline: var(--content-inline-margin);
+  margin-block-start: 3em;
+
   list-style-type: none;
+}
+
+h1 {
+  color: hsl(var(--heading-hsl-deg), 50%, 75%);
+  animation: h1-anim 10s linear infinite;
+  font-size: 3em;
 }
 
 li {
@@ -29,6 +37,6 @@ li:hover {
 }
 
 li:has(~ li:hover),
-li:hover ~ li {
+li:hover~li {
   filter: opacity(0.25);
 }

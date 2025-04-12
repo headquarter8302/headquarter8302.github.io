@@ -166,6 +166,11 @@ a {
   font-weight: bold;
 }
 
+#homelink {
+  margin-block-start: 2em;
+  margin-inline: 10vw;
+}
+
 p {
   line-height: 1.7;
   margin-block-end: 1em;
@@ -190,16 +195,6 @@ p {
 
 .noinvert {
   filter: invert(0) !important;
-}
-
-h1 {
-  font-size: var(--heading-size);
-  margin-block-end: 1vh;
-}
-
-h2 {
-  font-size: var(--emphasis-size);
-  margin-block-end: 1vh;
 }
 
 code:not(~ pre) {
