@@ -1,13 +1,19 @@
-<style>
+---
+const { plain, ...properties } = Astro.props;
+
+let backdrop = plain ? "0" : "var(--section-brightness)";
+---
+
+<style define:vars={{ backdrop }}>
   section {
     padding-block: var(--content-block-padding);
     padding-inline: var(--content-inline-margin);
   }
 
-  section:nth-child(even) {
-    backdrop-filter: var(--section-brightness);
+  section:nth-of-type(odd) {
+    backdrop-filter: var(--backdrop);
   }
 </style>
-<section id={Astro.props.id} class={Astro.props.class}>
+<section {...properties}>
   <slot />
 </section>
