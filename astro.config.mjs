@@ -10,5 +10,4 @@ export default defineConfig({
     })],
   site: 'https://headquarter8302.github.io',
   scopedStyleStrategy: 'class',
-  compressHTML: false,
 });
