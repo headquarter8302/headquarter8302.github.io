@@ -1,0 +1,5 @@
+[files]
+extend-exclude = [
+  "public/redirect.html",
+  "public/delivery/boxkit.css"
+]
