@@ -5,11 +5,6 @@ export enum BodyIdentifiers {
   NotFound = "notfound"
 }
 
-export enum FaderType {
-  In = "gray-fader-in",
-  Out = "gray-fader-out",
-}
-
 export enum RootPages {
   Index = "/",
   Blog = "/blog",
