@@ -51,6 +51,12 @@ body#main {
     }
   }
 
+  @media (prefers-color-scheme: light) {
+    #links a {
+      filter: invert(1);
+    }
+  }
+
   h1 {
     font-size: var(--heading-size);
     margin-block-end: 1vh;
