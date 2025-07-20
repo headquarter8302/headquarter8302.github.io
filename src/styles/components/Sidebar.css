@@ -1,0 +1,7 @@
+aside {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-highlight);
+  grid-area: 2 / 1 / 4 / 2;
+  padding-block-start: 1em;
+}

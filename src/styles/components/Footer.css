@@ -1,0 +1,30 @@
+footer {
+  font-size: smaller;
+  padding-block: 1vh;
+  text-align: center;
+  background-color: var(--bg-contrast);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: 3 / 2 / 4 / 3;
+
+  p {
+    margin: 0;
+  }
+
+  p:first-child {
+    margin-inline-start: 2.5vw;
+  }
+
+  p:last-child {
+    margin-inline-end: 2.5vw;
+  }
+}
+
+@container (width < 950px) {
+  footer {
+    flex-direction: column;
+    gap: 1vh;
+  }
+}

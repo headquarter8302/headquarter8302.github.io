@@ -1,0 +1,18 @@
+---
+import { SectionTypes } from "../../..";
+
+const { sectionType } = Astro.props;
+
+interface Props {
+  sectionType: SectionTypes;
+}
+---
+
+<style define:vars={{ sectionType }}>
+  .sidebar-section {
+    background-color: var(--sectionType);
+  }
+</style>
+<div class="sidebar-section">
+  <slot />
+</div>

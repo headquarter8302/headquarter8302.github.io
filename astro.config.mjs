@@ -9,5 +9,8 @@ export default defineConfig({
         !page.includes("dumpster"),
     })],
   site: 'https://headquarter8302.github.io',
-  scopedStyleStrategy: 'class',
+  // scopedStyleStrategy: 'class',
+  devToolbar: {
+    enabled: false
+  }
 });

@@ -17,7 +17,7 @@ This repository uses Bun as the package manager, script host, and runtime.
 bun install
 ```
 
-1. Run dev environment:
+2. Run dev environment:
 
 ```bash
 bun run dev

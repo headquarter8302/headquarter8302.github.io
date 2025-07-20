@@ -1,62 +1,36 @@
 ---
-import { Image } from "astro:assets";
-
 import Main from "../layouts/Main.astro";
 
-import { BodyIdentifiers, RootPages } from "../..";
-
-import Section from "../components/Section.astro";
-
-import "../styles/index.css";
-
-import RickrollImage from "../assets/img/rickroll.svg";
-import GitHubLogoImage from "../assets/img/github-mark-white.svg";
-import PencilImage from "../assets/img/pencil-solid.svg";
-import MusicImage from "../assets/img/music.svg";
+import { BodyIdentifiers } from "../..";
 ---
 
 <Main title="headquarter8302" bodyId={BodyIdentifiers.Main}>
-	<main class="fill-viewport-full fader-space" id="main">
-		<div class="hero-container">
-			<div id="hero">
-				<h1>headquarter8302</h1>
-			</div>
-			<div id="description" class="text-right">Hi. I'm Mark.</div>
-			<aside>
-				<p>
-					I'm currently redesigning this site for the <i>n</i>-th amount of
-					time, my apologies in advance if there are odd things on display.
-				</p>
-			</aside>
-			<nav id="links">
-				<a href="redirect"><Image src={RickrollImage} alt="Rickroll" /></a>
-				<a href="https://github.com/headquarter8302"
-					><Image src={GitHubLogoImage} alt="GitHub" /></a
-				>
-				<a href={RootPages.Blog}><Image src={PencilImage} alt="Blog" /></a>
-				<a href={RootPages.Music}><Image src={MusicImage} alt="Music" /></a>
-			</nav>
-		</div>
-	</main>
-	<Section id="blog" class="blog-container fill-viewport-half" heading="Blog">
-		<h2>Blog</h2>
-		<a href={RootPages.Blog}>Go to blog listing page</a>
-		<p>
-			There's supposed to be a blog preview here. In the mean time, you can
-			subscribe to <a href="/feed.xml">my RSS feed</a> (Yes, RSS, not Atom. I haven't
-			gotten around to configuring that yet).
-		</p>
-	</Section>
-	<Section id="contact" class="contact-container">
-		<h2>Contact</h2>
-		<ul>
-			<li>Discord: <code>headquarter8302</code></li>
-			<li>
-				GitHub: <a href="https://github.com/headquarter8302"
-					><code>headquarter8302</code></a
-				>
-			</li>
-			<li>Pretty much everywhere else: <code>headquarter8302</code></li>
-		</ul>
-	</Section>
+  <h1>Hellou</h1>
+  <br />
+  <h2>I'm Markus (headquarter8302)</h2>
+  <p>
+    I've been constantly remodelling my site, and this is its, what, 4th
+    iteration?
+  </p>
+  <p>
+    Use the links on the header to navigate. Be mindful of broken or unfinished
+    pages.
+  </p>
+  <br />
+  <h2>Contact</h2>
+  <p>Here are some ways to contact me, in order of preference:</p>
+  <ol>
+    <li>Discord: <code>headquarter8302</code></li>
+    <br />
+    <li>
+      GitHub: <a href="https://github.com/headquarter8302"
+        ><code>/headquarter8302</code></a
+      >. The GitHub link at the header also works
+    </li>
+    <br />
+    <li>
+      <a href="https://community.fandom.com/wiki/User:Headquarter8302">Fandom</a
+      > + everywhere else: headquarter8302
+    </li>
+  </ol>
 </Main>

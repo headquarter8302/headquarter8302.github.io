@@ -30,13 +30,3 @@ li {
     font-size: 120%;
   }
 }
-
-li:hover {
-  transform: scale(1.1) translateY(-2.5%);
-  filter: saturate(2);
-}
-
-li:has(~ li:hover),
-li:hover~li {
-  filter: opacity(0.25);
-}

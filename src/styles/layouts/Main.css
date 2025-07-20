@@ -1,0 +1,15 @@
+body {
+  container-name: body;
+  container-type: inline-size;
+  display: grid;
+  grid-template-columns: 4em 1fr;
+  grid-template-rows: 4em 1fr .01fr;
+  min-height: 100vh;
+}
+
+main {
+  margin-inline: 3em;
+  margin-block: 3em;
+
+  view-transition-name: main;
+}

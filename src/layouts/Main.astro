@@ -1,13 +1,18 @@
 ---
 import Head from "../components/meta/Head.astro";
-import Footer from "../components/Footer.astro";
-import type { BodyIdentifiers } from "../..";
+import Footer from "../components/meta/Footer.astro";
+import Header from "../components/meta/Header.astro";
+import Sidebar from "../components/meta/Sidebar.astro";
+
+import { BodyIdentifiers } from "../..";
 
 import "../styles/global.css";
+import "../styles/layouts/Main.css";
 
 interface Props {
   title: string;
   bodyId: BodyIdentifiers;
+  children: any;
 }
 
 const { title, bodyId } = Astro.props;
@@ -16,6 +21,11 @@ const { title, bodyId } = Astro.props;
 <!doctype html>
 <html lang="en-US" dir="ltr">
   <Head title={title} />
-  <body id={bodyId}> </body><slot />
-  <Footer />
+  <body id={bodyId}>
+    <Header />
+    <Sidebar />
+    <main>
+      <slot />
+    </main>
+  </body><Footer />
 </html>

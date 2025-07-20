@@ -1,0 +1,56 @@
+---
+import { Image } from "astro:assets";
+import favicon from "/favicon.ico";
+import "../../styles/components/Header.css";
+
+import githubImage from "../../assets/img/github-mark-white.svg";
+import musicImage from "../../assets/img/music.svg"
+import blogImage from "../../assets/img/pencil-solid.svg";
+import rickImage from "../../assets/img/rickroll.svg";
+---
+
+<header>
+  <div class="logo-container">
+    <a href="/"><Image src={favicon} alt={"Logo"} width={"40"} height={"40"} /></a>
+  </div>
+  <nav>
+    <ul class="navlinks-container">
+      <li>
+        <a href="https://github.com/headquarter8302">
+          <Image
+            src={githubImage}
+            alt={"GitHub"}
+            class:list={["icon", "index-link-icon"]}
+          />
+        </a>
+      </li>
+      <li>
+        <a href="/music">
+          <Image
+            src={musicImage}
+            alt={"Music"}
+            class:list={["icon", "index-link-icon"]}
+          />
+        </a>
+      </li>
+      <li>
+        <a href="/blog">
+          <Image
+            src={blogImage}
+            alt={"Blog"}
+            class:list={["icon", "index-link-icon"]}
+          />
+        </a>
+      </li>
+      <li>
+        <a href="/redirect.html">
+          <Image
+            src={rickImage}
+            alt={"Surprise"}
+            class:list={["icon", "index-link-icon"]}
+          />
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

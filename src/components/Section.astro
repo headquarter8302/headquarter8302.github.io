@@ -1,19 +1,27 @@
 ---
-const { plain, ...properties } = Astro.props;
+import "../styles/components/Section.css";
 
-let backdrop = plain ? "0" : "var(--section-brightness)";
+const { plain, height, ...props } = Astro.props;
+
+interface Props {
+  plain: boolean;
+  height?: "half" | "full";
+}
+
+const backdrop = plain ? "0" : "var(--section-brightness)";
+const cssHeight = height === "full" ? "100vh" : "50vh";
 ---
 
-<style define:vars={{ backdrop }}>
+<style define:vars={{ backdrop, cssHeight }}>
   section {
-    padding-block: var(--content-block-padding);
-    padding-inline: var(--content-inline-margin);
+
+    height: var(--cssHeight);
   }
 
   section:nth-of-type(odd) {
     backdrop-filter: var(--backdrop);
   }
 </style>
-<section {...properties}>
+<section {...props}>
   <slot />
 </section>
