@@ -1,7 +1,65 @@
 aside {
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
   background-color: var(--bg-highlight);
   grid-area: 2 / 1 / 4 / 2;
   padding-block-start: 1em;
+
+  --sidebarWidth: 4em;
+  /* default value */
+  transition: width ease-out 150ms;
+  width: var(--sidebarWidth);
+
+  view-transition-name: sidebar;
+}
+
+aside[data-expanded="true"] {
+  z-index: 1;
+}
+
+/* https://itnext.io/how-to-make-a-fancy-inverted-border-radius-in-css-5db048a53f95 */
+aside::after {
+  content: "";
+  position: absolute;
+
+  top: 4em;
+  transition: left ease-out 150ms;
+  left: var(--sidebarWidth);
+
+  aspect-ratio: 1/1;
+  height: 50px;
+  width: auto;
+  border-top-left-radius: 25px;
+  box-shadow: 0 -25px 0 0 var(--bg-highlight);
+}
+
+#sidebar-toggle {
+  aspect-ratio: 1/1;
+  width: 3em;
+  appearance: none;
+  margin-inline-start: 1em;
+  background-color: transparent;
+  color: var(--fg);
+  border-radius: 8px;
+  border: 0;
+  font-weight: bold;
+  box-shadow:
+    -1px -1px 2px color-mix(in oklch, var(--bg-highlight), var(--fg) 15%),
+    1px 1px 10px color-mix(in oklch, var(--bg-highlight), var(--bg));
+  margin-block-end: 1em;
+  transition: box-shadow ease-out 150ms, transform ease-out 150ms;
+  cursor: pointer;
+}
+
+#sidebar-toggle {
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.25);
+  }
+}
+
+#sidebar-toggle:active {
+  transform: scale(1);
+  box-shadow: -1px -1px 10px var(--bg) inset;
 }

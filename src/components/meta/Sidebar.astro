@@ -3,10 +3,10 @@ import SidebarSection from "./SidebarSection.astro";
 
 import "../../styles/components/Sidebar.css";
 import { SectionTypes } from "../../..";
+import SidebarToggle from "./SidebarToggle";
 ---
 
-<aside>
-  <SidebarSection sectionType={SectionTypes.Generic}>
-    A
-  </SidebarSection>
+<aside id={"sidebar"} data-expanded="false">
+  <SidebarToggle client:load client:only="preact" />
+  <SidebarSection sectionType={SectionTypes.Generic}> A </SidebarSection>
 </aside>
