@@ -109,7 +109,7 @@
     filter: invert(1) hue-rotate(180deg);
   }
 
-  img.icon {
+  img.icon, .logo {
     filter: invert(1);
   }
 }
@@ -134,8 +134,7 @@ a {
 }
 
 #homelink {
-  margin-block-start: 2em;
-  margin-inline: 10vw;
+  margin-block-end: 2em;
 }
 
 p {
