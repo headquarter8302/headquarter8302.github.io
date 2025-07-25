@@ -1,0 +1,21 @@
+---
+import { Image } from "astro:assets";
+
+const { href, src, title, classlist } = Astro.props;
+
+interface Props {
+  href: string | URL;
+  src: ImageMetadata;
+  title: string;
+  classlist?: string[];
+}
+---
+
+<a href={href}>
+  <Image
+    src={src}
+    alt={title}
+    title={title}
+    class:list={classlist ? ["icon", ...classlist] : ["icon"]}
+  />
+</a>
