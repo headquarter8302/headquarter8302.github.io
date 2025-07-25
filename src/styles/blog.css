@@ -1,32 +1,27 @@
-ul {
+ul.blog-list {
   display: flex;
+  justify-content: center;
   flex-flow: wrap;
   gap: 2.5vh;
-  padding-block-end: var(--content-block-padding);
-  padding-inline: var(--content-inline-margin);
-  margin-block-start: 3em;
 
   list-style-type: none;
+
+  li {
+    background-color: var(--bg-highlight);
+    padding: 1em;
+    border-radius: 8px;
+    width: 25em;
+    height: auto;
+    aspect-ratio: 2/1;
+
+    a {
+      font-size: 120%;
+    }
+  }
 }
 
 h1 {
   color: hsl(var(--heading-hsl-deg), 50%, 75%);
   animation: h1-anim 10s linear infinite;
   font-size: 3em;
-}
-
-li {
-  backdrop-filter: var(--section-brightness);
-  padding: 1em;
-  border-radius: 8px;
-  width: 17em;
-  aspect-ratio: 1/1;
-  will-change: contents;
-  transition:
-    transform 150ms,
-    filter 150ms;
-
-  a {
-    font-size: 120%;
-  }
 }
