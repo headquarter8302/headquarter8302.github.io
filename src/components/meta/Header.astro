@@ -4,25 +4,28 @@ import favicon from "/favicon.ico";
 import "../../styles/components/Header.css";
 
 import githubImage from "../../assets/img/github-mark-white.svg";
-import musicImage from "../../assets/img/music.svg"
+import musicImage from "../../assets/img/music.svg";
 import blogImage from "../../assets/img/pencil-solid.svg";
 import rickImage from "../../assets/img/rickroll.svg";
+import IconLink from "../IconLink.astro";
+import { ExternalLinks } from "../../..";
 ---
 
 <header>
   <div class="logo-container">
-    <a href="/"><Image src={favicon} alt={"Logo"} width={"40"} height={"40"} /></a>
+    <a href="/"
+      ><Image src={favicon} alt={"Logo"} width={"40"} height={"40"} class:list={["logo"]} /></a
+    >
   </div>
   <nav>
     <ul class="navlinks-container">
       <li>
-        <a href="https://github.com/headquarter8302">
-          <Image
-            src={githubImage}
-            alt={"GitHub"}
-            class:list={["icon", "index-link-icon"]}
-          />
-        </a>
+        <IconLink
+          href={ExternalLinks.GitHub}
+          src={githubImage}
+          title="GitHub"
+          classlist={["index-link-icon"]}
+        />
       </li>
       <li>
         <a href="/music">
