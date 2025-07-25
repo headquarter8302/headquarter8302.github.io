@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import Main from "../../layouts/Main.astro";
 import Section from "../../components/Section.astro";
-import ReturnHome from "../../components/ReturnHome.astro";
 
 import { BodyIdentifiers } from "../../..";
 
@@ -15,12 +14,11 @@ const sortedPosts = posts.sort(
 ---
 
 <Main title="headquarter8302 - blog" bodyId={BodyIdentifiers.Blog}>
-  <ReturnHome />
-  <Section id="blogintro" classes="fill-viewport-half">
+  <Section>
     <h1>Blogs</h1>
     <p>Writings and posts from me</p>
   </Section>
-  <ul>
+  <ul class:list={["blog-list"]}>
     {
       sortedPosts.map((post) => (
         <li data-key={post.id}>
