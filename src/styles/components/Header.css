@@ -7,20 +7,6 @@ header {
   grid-area: 1 / 1 / 2 / 3;
 }
 
-/* https://itnext.io/how-to-make-a-fancy-inverted-border-radius-in-css-5db048a53f95 */
-header::before {
-  content: "";
-  position: absolute;
-
-  top: 4em;
-  left: 4em;
-  aspect-ratio: 1/1;
-  height: 50px;
-  width: auto;
-  border-top-left-radius: 25px;
-  box-shadow: 0 -25px 0 0 var(--bg-highlight);
-}
-
 nav {
   display: flex;
 }
@@ -45,7 +31,7 @@ li img {
   transition: transform 150ms ease-out;
 
   &:hover,
-  &:focus-within {
+  &:focus-visible {
     transform: scale(1.25);
   }
 
