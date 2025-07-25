@@ -1,7 +1,7 @@
 ---
 import Main from "../layouts/Main.astro";
 
-import { BodyIdentifiers } from "../..";
+import { BodyIdentifiers, ExternalLinks } from "../..";
 ---
 
 <Main title="headquarter8302" bodyId={BodyIdentifiers.Main}>
@@ -23,13 +23,13 @@ import { BodyIdentifiers } from "../..";
     <li>Discord: <code>headquarter8302</code></li>
     <br />
     <li>
-      GitHub: <a href="https://github.com/headquarter8302"
+      GitHub: <a href={ExternalLinks.GitHub} rel="me"
         ><code>/headquarter8302</code></a
       >. The GitHub link at the header also works
     </li>
     <br />
     <li>
-      <a href="https://community.fandom.com/wiki/User:Headquarter8302">Fandom</a
+      <a href={ExternalLinks.Fandom.CommunityCentral} rel="me">Fandom</a
       > + everywhere else: headquarter8302
     </li>
   </ol>
