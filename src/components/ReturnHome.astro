@@ -1,6 +1,11 @@
 ---
 import { RootPages } from "../..";
 const { link, text } = Astro.props;
+
+interface Props {
+  link?: RootPages | URL | string
+  text?: string
+}
 ---
 
 <div id="homelink">
