@@ -164,3 +164,6 @@ dist
 .pnp.*
 
 _site/
+
+# devtools-specific config
+com.chrome.devtools.json
