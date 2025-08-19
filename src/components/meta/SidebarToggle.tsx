@@ -1,44 +1,27 @@
-import type { JSX } from "preact";
-import { useState } from "preact/hooks";
-
-type EmUnit = `${number}em`;
-type VwUnit = `${number}vw`;
-
-const enum SidebarWidths {
-	Collapsed = "4em",
-	Expanded = "20em",
-}
-
-const sidebarElem = document.getElementById("sidebar") as HTMLElement;
+import { useState, useEffect } from "preact/hooks";
 
 export default function SidebarToggle() {
-	const [sidebarExpanded, setSidebarExpanded] = useState(false);
-	const [buttonText, setButtonText] = useState("+");
+	const [expanded, setExpanded] = useState(false);
 
-	function setCSS(width: SidebarWidths) {
-		sidebarElem.style.setProperty("--sidebarWidth", width);
-	}
+	useEffect(() => {
+		const sidebar = document.getElementById("sidebar") as HTMLDivElement;
 
-	function handleClick(event: JSX.TargetedMouseEvent<HTMLButtonElement>) {
-		(sidebarExpanded) ?
-			(
-				setCSS(SidebarWidths.Collapsed),
-				setButtonText("+"),
-				sidebarElem.dataset.expanded = "false"
-			) :
-			(
-				setCSS(SidebarWidths.Expanded),
-				setButtonText("-"),
-				sidebarElem.dataset.expanded = "true"
-			);
+		sidebar.style.setProperty("--sidebarWidth", expanded ? "20em" : "4em");
+		sidebar.dataset.expanded = expanded ? "true" : "false";
 
-		setSidebarExpanded(!sidebarExpanded)
-	}
+		const main = document.body.getElementsByTagName("main")[0];
+		const closeSidebar = () => setExpanded(false);
+
+		main.addEventListener("click", closeSidebar, { passive: true });
+		return () => main.removeEventListener("click", closeSidebar);
+	}, [expanded]);
 
 	return (
 		<button
-			onClick={ handleClick }
+			onClick={ () => setExpanded(e => !e) }
 			id="sidebar-toggle"
-		>{ buttonText }</button>
-	)
+		>
+			{ expanded ? "-" : "+" }
+		</button>
+	);
 }

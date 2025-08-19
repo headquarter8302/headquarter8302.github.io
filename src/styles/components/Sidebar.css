@@ -53,13 +53,11 @@ aside::after {
 }
 
 #sidebar-toggle {
-  &:hover,
   &:focus-visible {
     transform: scale(1.25);
   }
 }
 
 #sidebar-toggle:active {
-  transform: scale(1);
   box-shadow: -1px -1px 10px var(--bg) inset;
 }
