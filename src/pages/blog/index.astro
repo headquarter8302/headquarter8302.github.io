@@ -14,10 +14,8 @@ const sortedPosts = posts.sort(
 ---
 
 <Main title="headquarter8302 - blog" bodyId={BodyIdentifiers.Blog}>
-  <Section>
-    <h1>Blogs</h1>
-    <p>Writings and posts from me</p>
-  </Section>
+  <h1>Blogs</h1>
+  <p>Writings and posts from me</p>
   <ul class:list={["blog-list"]}>
     {
       sortedPosts.map((post) => (

@@ -10,38 +10,8 @@
   font-style: italic;
 }
 
-@keyframes view-fade-out {
-  from {
-    transform: translateY(0);
-  }
-
-  to {
-    transform: translateY(10%);
-    opacity: 0;
-  }
-}
-
-@keyframes view-fade-in {
-  from {
-    transform: translateY(10%);
-  }
-
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
 @view-transition {
   navigation: auto;
-}
-
-::view-transition-old(main) {
-  animation: view-fade-out both 150ms;
-}
-
-::view-transition-new(main) {
-  animation: view-fade-in both 150ms;
 }
 
 @media (prefers-reduced-motion) or (prefers-reduced-motion: reduce) {
@@ -91,7 +61,7 @@
   --content-block-padding: 5vw;
   --fader-height: 2.5vh;
 
-  --section-brightness: brightness(1.5);
+  /* --section-brightness: brightness(1.5); */
 
   scrollbar-color: var(--font-c) var(--bg-color-static);
   background-color: var(--bg);
@@ -127,6 +97,10 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+h1 {
+  font-size: 3em;
+}
+
 a {
   color: inherit;
   text-decoration: underline;
@@ -139,7 +113,20 @@ a {
 
 p {
   line-height: 1.7;
-  margin-block-end: 1em;
+  margin-block-end: 2em;
+  font-size: 110%;
+}
+
+#overlay {
+  position: absolute;
+  z-index: 1;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: rgba(0 0 0 / .75);
+}
+
+#overlay[data-hidden="true"] {
+  display: none;
 }
 
 .fill-viewport-full {

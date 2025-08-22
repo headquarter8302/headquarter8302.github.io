@@ -1,6 +1,8 @@
 article {
-  margin-inline: 10vw;
-  margin-block: 2.5vh;
+  /* margin-inline: 10vw;
+  margin-block: 2.5vh; */
+  max-width: 50em;
+  margin: 0 auto;
 
   header {
     display: grid;

@@ -1,0 +1,21 @@
+ul.music-list {
+	display: flex;
+	justify-content: center;
+	flex-flow: wrap;
+	gap: 2.5vh;
+
+	list-style-type: none;
+
+	li {
+		background-color: var(--bg-highlight);
+		padding: 1em;
+		border-radius: 8px;
+		width: 25em;
+		height: auto;
+		aspect-ratio: 2/1;
+
+		a {
+			font-size: 120%;
+		}
+	}
+}

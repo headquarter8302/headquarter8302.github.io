@@ -1,0 +1,29 @@
+---
+import { getCollection } from "astro:content";
+import Music from "../../layouts/Music.astro";
+import YouTubePlayer from "../../components/YouTubePlayer.astro";
+
+export async function getStaticPaths() {
+	const posts = await getCollection("music");
+	return posts.map((post) => ({
+		params: { slug: post.slug },
+		props: { post },
+	}));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Music
+	musicTitle={post.data.title}
+	musicDesc={post.data.description}
+	musicDate={post.data.releaseDate}
+	musicGenre={post.data.genre}
+	musicLinks={[post.data.youtube, post.data.soundcloud]}
+>
+<div id="music-content">
+		<Content />
+		<YouTubePlayer videoId={null} />
+	</div>
+</Music>

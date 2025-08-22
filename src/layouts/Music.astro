@@ -1,0 +1,50 @@
+---
+import { BodyIdentifiers, RootPages } from "../..";
+import ReturnHome from "../components/ReturnHome.astro";
+import Main from "./Main.astro";
+
+import "../styles/layouts/Music.css";
+
+const { musicTitle, musicDesc, musicDate, musicGenre, musicLinks } =
+	Astro.props;
+
+interface Props {
+	children: any;
+	musicTitle: string;
+	musicDesc: string;
+	musicDate: Date;
+	musicGenre: string;
+	musicLinks: (string | undefined)[];
+}
+
+let youtubeLink: string | undefined = musicLinks.find((link) => {
+	link?.startsWith("https://www.youtube.com");
+});
+---
+
+<Main
+	title={`${musicTitle} | headquarter8302 - music`}
+	bodyId={BodyIdentifiers.Music}
+>
+	<ReturnHome link={RootPages.Music} text={"to music list"} />
+	<h1>{musicTitle}</h1>
+	<div class="music-information">
+		<dl>
+			<dt>Description</dt>
+			<dd>{musicDesc}</dd>
+			<dt>Release date</dt>
+			<dd>{musicDate.toLocaleDateString("en-GB")}</dd>
+			<dt>Genre</dt>
+			<dd>{musicGenre}</dd>
+			<dt>Links</dt>
+			{
+				musicLinks.map((link) => (
+					<dd>
+						<a href={link}>{link}</a>
+					</dd>
+				))
+			}
+		</dl>
+	</div>
+	<slot />
+</Main>

@@ -1,27 +1,13 @@
 ---
 import "../styles/components/Section.css";
 
-const { plain, height, ...props } = Astro.props;
+const { plain, ...props } = Astro.props;
 
 interface Props {
   plain?: boolean;
-  height?: "half" | "full";
 }
-
-const backdrop = plain ? "0" : "var(--section-brightness)";
-const cssHeight = height === "full" ? "100vh" : "50vh";
 ---
 
-<style define:vars={{ backdrop, cssHeight }}>
-  section {
-
-    height: var(--cssHeight);
-  }
-
-  section:nth-of-type(odd) {
-    backdrop-filter: var(--backdrop);
-  }
-</style>
 <section {...props}>
   <slot />
 </section>

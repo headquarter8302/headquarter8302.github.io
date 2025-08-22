@@ -21,7 +21,6 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
   bodyId={BodyIdentifiers.Blog}
 >
 <ReturnHome link={RootPages.Blog} text="to blog list" />
-<main>
   <article>
     <header>
       <hgroup>
@@ -33,5 +32,4 @@ const { postTitle, postDesc, postPublish, postTags } = Astro.props;
     </header>
     <slot />
   </article>
-</main>
 </Main>

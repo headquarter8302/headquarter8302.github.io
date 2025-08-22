@@ -22,6 +22,7 @@ const { title, bodyId } = Astro.props;
 <html lang="en-US" dir="ltr">
   <Head title={title} />
   <body id={bodyId}>
+    <div id="overlay" data-hidden="true"></div>
     <Header />
     <Sidebar />
     <main>

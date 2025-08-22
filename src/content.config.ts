@@ -1,7 +1,5 @@
-// 1. Import utilities from `astro:content`
 import { defineCollection, z } from 'astro:content';
 
-// 3. Define your collection(s)
 const blogCollection = defineCollection({
   schema: z.object({
     title: z.string(),
@@ -11,5 +9,15 @@ const blogCollection = defineCollection({
   })
 });
 
-// 4. Export a single `collections` object to register your collection(s)
-export const collections = { blog: blogCollection };
+const musicCollection = defineCollection({
+  schema: z.object({
+    title: z.string(),
+    description: z.string(),
+    releaseDate: z.coerce.date(),
+    genre: z.string(),
+    youtube: z.string().optional(),
+    soundcloud: z.string().optional(),
+  })
+})
+
+export const collections = { blog: blogCollection, music: musicCollection };

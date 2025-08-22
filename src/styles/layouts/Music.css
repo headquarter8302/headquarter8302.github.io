@@ -1,0 +1,22 @@
+.music-information {
+	width: fit-content;
+	float: left;
+}
+
+#music-content {
+	float: right;
+}
+
+dl {
+	background-color: var(--bg-highlight);
+	/* width: min-content; */
+	padding: 1em;
+
+	dt {
+		font-weight: bold;
+	}
+
+	dd:not(:last-child) {
+		margin-block-end: 1em;
+	}
+}

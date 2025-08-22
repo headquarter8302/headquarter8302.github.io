@@ -1,0 +1,28 @@
+---
+import { getCollection } from "astro:content";
+import { BodyIdentifiers } from "../../..";
+import Main from "../../layouts/Main.astro";
+
+import "../../styles/pages/music.css";
+
+const posts = await getCollection("music");
+const sortedPosts = posts.sort(
+	(a, b) => b.data.releaseDate.getTime() - a.data.releaseDate.getTime(),
+);
+---
+
+<Main bodyId={BodyIdentifiers.Music} title={"music - headquarter8302"}>
+	<h1>Music</h1>
+	<p>Collection of music produced by me.</p>
+	<ul class:list={["music-list"]}>
+		{
+			sortedPosts.map((post) => (
+				<li data-key={post.id}>
+					<a href={`/music/${post.slug}`}>{post.data.title}</a>
+					<p>{post.data.description}</p>
+					<small>{new Date(post.data.releaseDate).toLocaleDateString()}</small>
+				</li>
+			))
+		}
+	</ul>
+</Main>
