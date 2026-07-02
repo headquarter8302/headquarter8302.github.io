@@ -12,7 +12,7 @@
     "@astrojs/preact": "^4.1.0",
     "@astrojs/rss": "4.0.12",
     "@astrojs/sitemap": "3.5.0",
-    "astro": "5.15.9",
+    "astro": "6.4.6",
     "markdown-it": "^14.1.0",
     "preact": "^10.26.9",
     "sanitize-html": "^2.14.0"
